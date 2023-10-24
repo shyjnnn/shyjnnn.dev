@@ -1,0 +1,21 @@
+@use '@/styles/utils';
+
+.gnb {
+  height: 7rem;
+  font-style: italic;
+  @include utils.flexbox($justify: space-between);
+}
+
+.gnb > *:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.about {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
