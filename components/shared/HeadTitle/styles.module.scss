@@ -1,0 +1,26 @@
+@use '@/styles/utils';
+
+.head-title {
+  @include utils.flexbox($justify: center, $align: flex-start);
+
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.title {
+  @include utils.font-style($size: 'size1', $weight: 800, $style: italic);
+  @include utils.mobile {
+    @include utils.font-style($size: 'size3', $weight: 700, $style: italic);
+  }
+}
+
+.count {
+  @include utils.font-style($size: 'size6', $weight: 400, $style: italic);
+  @include utils.mobile {
+    @include utils.font-style($size: 'size7', $weight: 400, $style: italic);
+  }
+
+  margin: 0;
+  color: utils.$gray;
+}
