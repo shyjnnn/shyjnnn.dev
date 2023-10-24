@@ -2,7 +2,6 @@
 
 .gnb {
   height: 7rem;
-  font-style: italic;
   @include utils.flexbox($justify: space-between);
 }
 
@@ -11,11 +10,9 @@
 }
 
 .logo {
-  font-size: 2.4rem;
-  font-weight: 700;
+  @include utils.font-style($size: 'size4', $weight: 700, $style: italic);
 }
 
 .about {
-  font-size: 1.4rem;
-  font-weight: 700;
+  @include utils.font-style('size6', $weight: 700, $style: italic);
 }
