@@ -15,6 +15,10 @@
   }
 }
 
+.title:hover {
+  text-decoration: underline;
+}
+
 .count {
   @include utils.font-style($size: 'size6', $weight: 400, $style: italic);
   @include utils.mobile {
