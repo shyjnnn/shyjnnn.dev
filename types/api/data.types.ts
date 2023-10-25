@@ -4,4 +4,9 @@ interface BlogPost {
   date: string;
 }
 
-export type { BlogPost };
+interface AllBlogPosts extends BlogPost {
+  category: string;
+  en_category: string;
+}
+
+export type { AllBlogPosts, BlogPost };
