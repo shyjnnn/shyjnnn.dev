@@ -7,16 +7,18 @@ const cx = classNames.bind(styles);
 export default function Card({
   category,
   title,
+  slug,
   date,
   en_category,
 }: {
   category: string;
   title: string;
+  slug: string;
   date: string;
   en_category: string;
 }) {
   return (
-    <Link href={`${en_category}/${title}`}>
+    <Link href={`${en_category}/${slug}`}>
       <div className={cx('shadow')}>
         <div className={cx('wrap')}>
           <p className={cx('category')}>{category}</p>
