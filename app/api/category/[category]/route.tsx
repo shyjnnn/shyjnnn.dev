@@ -11,6 +11,5 @@ export async function GET(
   const { category } = params;
 
   const fileContents = await getPostsByCategory(category);
-  //   console.log(fileContents);
   return NextResponse.json(fileContents);
 }

@@ -12,7 +12,6 @@ export async function GET(
 
   const fileContents = await getMarkdownFiles(category, title);
   const matterResult = matter(fileContents);
-  console.log(matterResult);
 
   return NextResponse.json(matterResult);
 }
