@@ -1,0 +1,34 @@
+@use '@/styles/utils';
+
+.shadow:hover {
+  border-radius: 1rem;
+  background-color: utils.$black;
+}
+
+.wrap {
+  position: relative;
+  padding: 1rem;
+  transition: transform 0.25s ease;
+  border-radius: 1rem;
+  background-color: utils.$light-gray;
+  gap: 1rem;
+  @include utils.flexbox($direction: column, $justify: center, $align: flex-start);
+}
+
+.wrap:hover {
+  transform: translate(0.25rem, -0.25rem);
+}
+
+.category {
+  color: utils.$blue;
+  @include utils.font-style($size: 'size6', $weight: 400);
+}
+
+.title {
+  @include utils.font-style($size: 'size4', $weight: 700);
+}
+
+.date {
+  color: utils.$gray;
+  @include utils.font-style($size: 'size6', $weight: 400);
+}
