@@ -1,16 +1,9 @@
-# 브라우저가 어떻게 동작할까?
-
 ---
-
+title: 브라우저가 어떻게 동작할까?
 date: 2023년 4월 3일
 slug: 브라우저가-어떻게-동작할까
-author: eva
-status: Public
 tags: CS
-type: Post
-updatedAt: 2023년 9월 28일 오후 6:50
 category: 🙏잡학사전
-
 ---
 
 > 출처 : [https://yozm.wishket.com/magazine/detail/1338/](https://yozm.wishket.com/magazine/detail/1338/)
@@ -21,9 +14,8 @@ category: 🙏잡학사전
 2. DOM 및 CSSOM을 결합하여 렌더 트리를 형성합니다.
 3. 렌더 트리에서 레이아웃을 실행하여 각 노드의 기하학적 형태를 계산합니다.
 4. 개별 노드를 화면에 페인트합니다.
-   
-![Untitled](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/73169854-4907-4b80-96f3-5c5ccdf9ed33)
 
+![Untitled](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/73169854-4907-4b80-96f3-5c5ccdf9ed33)
 
 - **사용자 인터페이스(UI)**
 - **브라우저 엔진**
@@ -46,7 +38,6 @@ category: 🙏잡학사전
 ## 렌더링 엔진 동작 과정
 
 ![critical-rendering-path](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/6047d9b9-a12e-41a1-9b08-ad3e987935e9)
-
 
 Critical Rendering Path는 아래의 4단계를 거칩니다.
 
