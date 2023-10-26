@@ -1,0 +1,9 @@
+@use '@/styles/utils';
+
+.h2 {
+  @include utils.font-style($size: 'size4', $weight: 700, $style: normal);
+}
+
+a.a {
+  color: utils.$semi-gray;
+}
