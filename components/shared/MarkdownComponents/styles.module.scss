@@ -1,0 +1,83 @@
+@use '@/styles/utils';
+
+.h1 {
+  @include utils.font-style($size: 'size2', $weight: 700, $style: normal);
+}
+
+.h2 {
+  @include utils.font-style($size: 'size3', $weight: 700, $style: normal);
+}
+
+.h3 {
+  @include utils.font-style($size: 'size4', $weight: 700, $style: normal);
+}
+
+.h4 {
+  @include utils.font-style($size: 'size5', $weight: 700, $style: normal);
+
+  margin-top: 2rem;
+}
+
+.h1,
+.h2,
+.h3 {
+  margin-top: 4rem;
+}
+
+.code {
+  width: fit-content;
+  padding: 0 0.3rem;
+  border-radius: 0.2rem;
+  background-color: utils.$light-blue-gray;
+  color: utils.$pastel-red;
+  font-style: italic;
+}
+
+.codeblock {
+  border-radius: 1rem;
+}
+
+.img-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.ol {
+  display: block;
+  margin-block: 1em 1em;
+  margin-inline: 0 0;
+  padding-inline-start: 40px;
+  list-style-type: decimal;
+}
+
+.ul {
+  display: block;
+  margin-block: 1em 1em;
+  margin-inline: 0 0;
+  padding-inline-start: 40px;
+  list-style-type: disc;
+}
+
+.li {
+  padding-left: 0.5rem;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.aside {
+  margin: 1rem 0;
+  padding: 1rem 1rem 0.2rem;
+  border-radius: 1rem;
+  background-color: utils.$light-blue-gray;
+}
+
+.aside::first-line {
+  font-weight: 700;
+}
