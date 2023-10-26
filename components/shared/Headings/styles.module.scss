@@ -4,6 +4,19 @@
   @include utils.font-style($size: 'size4', $weight: 700, $style: normal);
 }
 
+.wrap {
+  margin-top: 1rem;
+}
+
 a.a {
   color: utils.$semi-gray;
+}
+
+.ul {
+  margin-inline: 0 0;
+  padding-inline-start: 2rem;
+}
+
+.headings-wrap {
+  width: fit-content;
 }

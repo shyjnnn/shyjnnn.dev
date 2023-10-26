@@ -6,5 +6,6 @@ interface SelectProps {
 interface LayoutProps {
   tag?: React.ElementType;
   children: React.ReactNode;
+  className?: string;
 }
 export type { LayoutProps, SelectProps };

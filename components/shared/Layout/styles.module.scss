@@ -11,3 +11,7 @@
     padding: 0 2rem;
   }
 }
+
+.flex {
+  @include utils.flexbox($justify: center, $align: flex-start);
+}
