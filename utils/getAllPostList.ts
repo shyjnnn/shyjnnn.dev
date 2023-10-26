@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
 
-import { AllBlogPosts } from '@/types/api/data.types';
+import { AllPostInfos } from '@/types/api/data.types';
 
 async function getAllPostsList() {
   const postFolder = path.join(process.cwd(), '_posts');
@@ -21,12 +21,12 @@ async function getAllPostsList() {
       const fileNames = await fs.readdir(categoryFolder);
 
       for (const fileName of fileNames) {
-        const id = fileName.replace(/\.md$/, '');
+        const id = fileName.replace(/\.mdx$/, '');
         const fullPath = path.join(categoryFolder, fileName);
         const fileContents = await fs.readFile(fullPath, 'utf-8');
         const matterResult = matter(fileContents);
 
-        const postLists: AllBlogPosts = {
+        const postLists: AllPostInfos = {
           id,
           title: matterResult.data.title as string,
           date: matterResult.data.date as string,

@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import matter from 'gray-matter';
 import path from 'path';
 
-import { BlogPost } from '@/types/api/data.types';
+import { PostInfo } from '@/types/api/data.types';
 
 async function getPostsByCategory(category: string) {
   const categoryFolder = path.join(process.cwd(), '_posts', category);
@@ -12,7 +12,7 @@ async function getPostsByCategory(category: string) {
 
     const allPostsData = await Promise.all(
       fileNames.map(async (fileName) => {
-        const id = fileName.replace(/\.md$/, '');
+        const id = fileName.replace(/\.mdx$/, '');
 
         const fullPath = path.join(categoryFolder, fileName);
 
@@ -20,13 +20,13 @@ async function getPostsByCategory(category: string) {
 
         const matterResult = matter(fileContents);
 
-        const blogPost: BlogPost = {
+        const PostInfo: PostInfo = {
           id,
           title: matterResult.data.title as string,
           date: matterResult.data.date as string,
         };
 
-        return blogPost;
+        return PostInfo;
       })
     );
 
