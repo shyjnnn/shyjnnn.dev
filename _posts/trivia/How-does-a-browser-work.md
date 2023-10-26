@@ -15,7 +15,9 @@ category: 🙏잡학사전
 3. 렌더 트리에서 레이아웃을 실행하여 각 노드의 기하학적 형태를 계산합니다.
 4. 개별 노드를 화면에 페인트합니다.
 
-![Untitled](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/73169854-4907-4b80-96f3-5c5ccdf9ed33)
+![browser](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/7c94df3e-5f1b-4113-b990-4f652c82378a)
+
+
 
 - **사용자 인터페이스(UI)**
 - **브라우저 엔진**
@@ -37,7 +39,7 @@ category: 🙏잡학사전
 
 ## 렌더링 엔진 동작 과정
 
-![critical-rendering-path](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/6047d9b9-a12e-41a1-9b08-ad3e987935e9)
+![critical-rendering-path](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/b81a6ace-e7d5-4b7a-8b17-75c6bb3290eb)
 
 Critical Rendering Path는 아래의 4단계를 거칩니다.
 
