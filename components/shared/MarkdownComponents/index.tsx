@@ -40,11 +40,14 @@ export const MarkdownComponents: Components = {
     const match = /language-(\w+)/.exec(className || '');
     return match ? (
       <SyntaxHighlighter
-        language={match[1]}
+        showLineNumbers
         PreTag='div'
+        language={match[1]}
+        wrapLines
         style={materialDark}
-        className={cx('codeblock')}>
-        {String(children).replace(/\n$/, '')}
+        className={cx('codeblock')}
+        lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}>
+        {String(children).replace(/wrapLines\n$/, '')}
       </SyntaxHighlighter>
     ) : (
       <code className={cx('code')} {...props}>

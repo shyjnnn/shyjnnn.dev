@@ -1,0 +1,11 @@
+@use '@/styles/utils';
+
+.wrap {
+  position: sticky;
+  top: 150px;
+  width: 250px;
+  margin-left: 100px;
+  @include utils.tablet {
+    display: none;
+  }
+}

@@ -25,7 +25,7 @@
 }
 
 .code {
-  width: fit-content;
+  // width: fit-content;
   padding: 0 0.3rem;
   border-radius: 0.2rem;
   background-color: utils.$light-blue-gray;
@@ -34,12 +34,17 @@
 }
 
 .codeblock {
+  width: 100%;
+  overflow: auto;
   border-radius: 1rem;
 }
 
 .img-wrap {
   position: relative;
-  width: 100%;
+
+  // width: 100%;
+
+  // overflow-x: auto;
 }
 
 .img {
@@ -56,7 +61,6 @@
 }
 
 .ul {
-  display: block;
   margin-block: 1em 1em;
   margin-inline: 0 0;
   padding-inline-start: 40px;
@@ -72,6 +76,7 @@
 }
 
 .aside {
+  width: 100%;
   margin: 1rem 0;
   padding: 1rem 1rem 0.2rem;
   border-radius: 1rem;

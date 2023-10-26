@@ -1,4 +1,6 @@
+import Layout from '@/components/shared/Layout';
 import PostContentBody from '@/components/shared/PostContentBody';
+import TableOfContents from '@/components/TableOfContents';
 import { getPost } from '@/services/getPost';
 
 export default async function Post({
@@ -19,8 +21,11 @@ export default async function Post({
   const { content, data } = post;
   console.log(data);
   return (
-    <div>
-      <PostContentBody content={content} />
-    </div>
+    <Layout tag='main' className='flex'>
+      <article>
+        <PostContentBody content={content} />
+      </article>
+      <TableOfContents />
+    </Layout>
   );
 }
