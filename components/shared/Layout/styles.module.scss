@@ -1,0 +1,13 @@
+@use '@/styles/utils';
+
+.layout {
+  width: 100%;
+  max-width: 102.4rem;
+  height: 100%;
+  margin: 0 auto;
+
+  @include utils.tablet {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}

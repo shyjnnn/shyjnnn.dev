@@ -3,4 +3,8 @@ interface SelectProps {
   initialOption: [string, number];
 }
 
-export type { SelectProps };
+interface LayoutProps {
+  tag?: React.ElementType;
+  children: React.ReactNode;
+}
+export type { LayoutProps, SelectProps };
