@@ -21,7 +21,7 @@ async function getAllPostsList() {
       const fileNames = await fs.readdir(categoryFolder);
 
       for (const fileName of fileNames) {
-        const id = fileName.replace(/\.mdx$/, '');
+        const id = fileName.replace(/\.md$/, '');
         const fullPath = path.join(categoryFolder, fileName);
         const fileContents = await fs.readFile(fullPath, 'utf-8');
         const matterResult = matter(fileContents);

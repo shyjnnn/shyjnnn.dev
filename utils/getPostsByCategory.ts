@@ -12,7 +12,7 @@ async function getPostsByCategory(category: string) {
 
     const allPostsData = await Promise.all(
       fileNames.map(async (fileName) => {
-        const id = fileName.replace(/\.mdx$/, '');
+        const id = fileName.replace(/\.md$/, '');
 
         const fullPath = path.join(categoryFolder, fileName);
 
