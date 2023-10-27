@@ -4,34 +4,40 @@ import { Components } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
+import createId from '@/utils/createId';
+
 import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 export const MarkdownComponents: Components = {
   h1: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h1 className={cx('h1')} {...props}>
+      <h1 className={cx('h1')} id={id} {...props}>
         {children}
       </h1>
     );
   },
   h2: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h2 className={cx('h2')} {...props}>
+      <h2 className={cx('h2')} id={id} {...props}>
         {children}
       </h2>
     );
   },
   h3: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h3 className={cx('h3')} {...props}>
+      <h3 className={cx('h3')} id={id} {...props}>
         {children}
       </h3>
     );
   },
   h4: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h4 className={cx('h4')} {...props}>
+      <h4 className={cx('h4')} id={id} {...props}>
         {children}
       </h4>
     );
