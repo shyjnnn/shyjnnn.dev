@@ -1,19 +1,19 @@
 @use '@/styles/utils';
 
 .h1 {
-  @include utils.font-style($size: 'size2', $weight: 700, $style: normal);
-}
-
-.h2 {
   @include utils.font-style($size: 'size3', $weight: 700, $style: normal);
 }
 
-.h3 {
+.h2 {
   @include utils.font-style($size: 'size4', $weight: 700, $style: normal);
 }
 
-.h4 {
+.h3 {
   @include utils.font-style($size: 'size5', $weight: 700, $style: normal);
+}
+
+.h4 {
+  @include utils.font-style($size: 'size6', $weight: 700, $style: normal);
 
   margin-top: 2rem;
 }
@@ -21,7 +21,7 @@
 .h1,
 .h2,
 .h3 {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .code {
