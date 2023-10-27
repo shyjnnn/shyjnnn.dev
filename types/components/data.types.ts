@@ -1,7 +1,6 @@
-interface HeadingItem {
-  id: string;
-  title: string;
-  items: HeadingItem[];
+interface TableOfContents {
+  level: number;
+  text: string;
 }
 
-export type { HeadingItem };
+export type { TableOfContents };
