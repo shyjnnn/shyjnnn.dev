@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 export default function HeadTitle({ text, count }: { text: string; count: number }) {
   return (
     <div className={cx('head-title')}>
-      <h1 className={cx('title')}>{text}</h1>
+      <h1 className={cx('title')}>{text.toUpperCase()}</h1>
       <p className={cx('count')}>{`(${count})`}</p>
     </div>
   );

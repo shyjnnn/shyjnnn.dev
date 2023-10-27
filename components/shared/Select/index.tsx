@@ -11,9 +11,8 @@ import styles from './styles.module.scss';
 
 const cx = classNames.bind(styles);
 
-function SelectBox(props: SelectProps, ref: Ref<HTMLButtonElement>) {
+function Select(props: SelectProps, ref: Ref<HTMLButtonElement>) {
   const { initialOption, categories } = props;
-
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<[string, number]>(initialOption);
 
@@ -34,14 +33,12 @@ function SelectBox(props: SelectProps, ref: Ref<HTMLButtonElement>) {
           {categories
             .filter((category: [string, number]) => category[0] !== selectedOption[0])
             .map((category: [string, number]) => (
-              <>
-                <li
-                  className={cx('li')}
-                  key={category[0]}
-                  onClick={() => handleOptionClick(category)}>
-                  {category[0]} <span className={cx('span')}>{`(${category[1]})`}</span>
-                </li>
-              </>
+              <li
+                className={cx('li')}
+                key={category[0]}
+                onClick={() => handleOptionClick(category)}>
+                {category[0]} <span className={cx('span')}>{`(${category[1]})`}</span>
+              </li>
             ))}
         </ul>
       )}
@@ -49,4 +46,4 @@ function SelectBox(props: SelectProps, ref: Ref<HTMLButtonElement>) {
   );
 }
 
-export default forwardRef(SelectBox);
+export default forwardRef(Select);
