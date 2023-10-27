@@ -20,7 +20,6 @@ function Select(props: SelectProps, ref: Ref<HTMLButtonElement>) {
   const allCategory: [string, number] = categories.find(
     (category) => category[0] === 'all'
   ) as [string, number];
-
   const [selectedOption, setSelectedOption] = useState<[string, number]>(
     initialOption
       ? (categories.filter((category) => category[0] === initialOption)[0] as [
@@ -29,6 +28,7 @@ function Select(props: SelectProps, ref: Ref<HTMLButtonElement>) {
         ])
       : allCategory
   );
+  console.log('initialOption', initialOption, selectedOption);
 
   const selectRef = useOutsideClick<HTMLDivElement>(isOpen, setIsOpen);
 
@@ -40,7 +40,9 @@ function Select(props: SelectProps, ref: Ref<HTMLButtonElement>) {
   return (
     <div className={cx('wrap')} ref={selectRef}>
       <button type='button' className={cx()} ref={ref} onClick={() => setIsOpen(!isOpen)}>
-        <HeadTitle text={selectedOption[0]} count={selectedOption[1]} />
+        {selectedOption && (
+          <HeadTitle text={selectedOption[0]} count={selectedOption[1]} />
+        )}
       </button>
       {isOpen && (
         <ul className={cx('ul')}>

@@ -29,14 +29,26 @@ $breakpoint-mobile: 768px;
     font-size: 4rem;
     font-style: $style;
     font-weight: $weight;
+
+    @include tablet {
+      font-size: 3rem;
+    }
   } @else if $size == 'size2' {
     font-size: 3.6rem;
     font-style: $style;
     font-weight: $weight;
+
+    @include tablet {
+      font-size: 2.4rem;
+    }
   } @else if $size == 'size3' {
     font-size: 2.4rem;
     font-style: $style;
     font-weight: $weight;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
   } @else if $size == 'size4' {
     font-size: 1.6rem;
     font-style: $style;

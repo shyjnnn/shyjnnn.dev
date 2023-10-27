@@ -14,16 +14,17 @@ export default async function CategoryPage({ params }: { params: { category: str
 
   return (
     <section className={cx('card-section')}>
-      {post.map((card) => (
-        <Card
-          key={card.id}
-          category={card.category}
-          title={card.title}
-          slug={card.id}
-          date={card.date}
-          en_category={card.en_category}
-        />
-      ))}
+      {post.length !== 0 &&
+        post.map((card) => (
+          <Card
+            key={card.id}
+            category={card.category}
+            title={card.title}
+            slug={card.id}
+            date={card.date}
+            en_category={card.en_category}
+          />
+        ))}
     </section>
   );
 }
