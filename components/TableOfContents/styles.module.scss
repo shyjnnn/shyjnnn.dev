@@ -2,10 +2,30 @@
 
 .wrap {
   position: sticky;
-  top: 150px;
-  width: 250px;
-  margin-left: 100px;
+  top: 15rem;
+  min-width: 20rem;
+  margin-left: 10rem;
   @include utils.tablet {
     display: none;
   }
+}
+
+.h2 {
+  @include utils.font-style($size: 'size4', $weight: 700, $style: normal);
+}
+
+.toc-item {
+  color: utils.$semi-gray;
+}
+
+.level-2 {
+  padding-inline-start: 2rem;
+}
+
+.level-3 {
+  padding-inline-start: 4rem;
+}
+
+.level-4 {
+  padding-inline-start: 6rem;
 }
