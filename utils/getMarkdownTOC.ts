@@ -1,19 +1,20 @@
-export interface TocProps {
-  text: string;
-  level: number;
-}
+import { TableOfContents } from '@/types/components/data.types';
 
-/**
- * 마크다운 TOC 리스트 반환 메서드
- *
- * @param {string} text: 텍스트
- *
- * @returns {TocProps[]} 마크다운 TOC 리스트
- */
-export function getMarkdownToc(text: string): TocProps[] {
-  const list: TocProps[] = [];
+export function getMarkdownToc(text: string): TableOfContents[] {
+  const list: TableOfContents[] = [];
 
-  const temp = text.replace(/```[^]*?```/gm, '');
+  // 정규식 패턴: Strong 형식 제거
+  const removeStrongPattern = /(\*\*|__)(.*?)\1/g;
+
+  // 정규식 패턴: 링크 형식 제거
+  const removeLinkPattern = /\[([^\]]*)\]\([^)]*\)/g;
+
+  // 일반 텍스트에서 strong 및 링크 형식을 제거
+  const textWithoutStrongAndLinks = text
+    .replace(removeStrongPattern, '$2')
+    .replace(removeLinkPattern, '$1');
+
+  const temp = textWithoutStrongAndLinks.replace(/```[^]*?```/gm, '');
 
   const regex = /^(#{1,6}) (.+)$/gm;
 
@@ -26,9 +27,11 @@ export function getMarkdownToc(text: string): TocProps[] {
       break;
     }
 
+    const text = match[2].trim();
+
     list.push({
       level: match[1].trim().length,
-      text: match[2].trim(),
+      text,
     });
   }
 
