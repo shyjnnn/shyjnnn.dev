@@ -7,7 +7,7 @@ import { AllPostInfos } from '@/types/api/data.types';
 async function getAllPostsList() {
   const postFolder = path.join(process.cwd(), '_posts');
 
-  const allPosts = [];
+  const allPosts: AllPostInfos[] = [];
 
   try {
     const categoryFolders = await fs.readdir(postFolder);
