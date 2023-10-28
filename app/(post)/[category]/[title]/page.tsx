@@ -22,7 +22,6 @@ export default async function Post({
   }
 
   const { content, data } = post;
-  console.log(data); // NOTE : 제거해야함
   const tableOfContents = getMarkdownToc(content);
   return (
     <Layout className='head'>
