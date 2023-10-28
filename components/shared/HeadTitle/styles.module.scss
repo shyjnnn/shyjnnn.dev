@@ -10,9 +10,6 @@
 
 .title {
   @include utils.font-style($size: 'size1', $weight: 800, $style: italic);
-  @include utils.mobile {
-    @include utils.font-style($size: 'size3', $weight: 700, $style: italic);
-  }
 }
 
 .title:hover {
@@ -21,9 +18,6 @@
 
 .count {
   @include utils.font-style($size: 'size6', $weight: 400, $style: italic);
-  @include utils.mobile {
-    @include utils.font-style($size: 'size7', $weight: 400, $style: italic);
-  }
 
   margin: 0;
   color: utils.$gray;
