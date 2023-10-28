@@ -28,7 +28,6 @@ function Select(props: SelectProps, ref: Ref<HTMLButtonElement>) {
         ])
       : allCategory
   );
-  console.log('initialOption', initialOption, selectedOption);
 
   const selectRef = useOutsideClick<HTMLDivElement>(isOpen, setIsOpen);
 
