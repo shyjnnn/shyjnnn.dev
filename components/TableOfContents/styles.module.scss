@@ -14,7 +14,11 @@
   @include utils.font-style($size: 'size4', $weight: 700, $style: normal);
 }
 
-.toc-item {
+.toc-item:link,
+.toc-item:visited,
+.toc-item:hover,
+.toc-item:active {
+  display: block;
   color: utils.$semi-gray;
 }
 
@@ -30,6 +34,6 @@
   padding-inline-start: 6rem;
 }
 
-.current {
+.toc-item.current {
   color: utils.$blue;
 }

@@ -1,5 +1,6 @@
 'use client';
 import classNames from 'classnames/bind';
+import Link from 'next/link';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import { TableOfContents } from '@/types/components/data.types';
@@ -24,20 +25,17 @@ const TableOfContentItem = ({
   onCurrentId,
 }: TableOfContentItemProps) => {
   const id = createId(text);
-
   const handleClick = () => {
     onCurrentId(id);
-
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
-    <div
+    <Link
       id={id}
       className={cx('toc-item', level, { current: isActive })}
-      onClick={handleClick}>
+      onClick={handleClick}
+      href={`#${id}`}>
       {text}
-    </div>
+    </Link>
   );
 };
 
