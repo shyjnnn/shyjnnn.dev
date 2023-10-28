@@ -1,0 +1,10 @@
+@use '@/styles/utils';
+
+.chip {
+  @include utils.font-style($size: 'size6', $weight: 400);
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 5rem;
+  background-color: utils.$light-blue-gray;
+  color: utils.$gray;
+}
