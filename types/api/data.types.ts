@@ -2,9 +2,6 @@ interface PostInfo {
   id: string;
   title: string;
   date: string;
-}
-
-interface AllPostInfos extends PostInfo {
   category: string;
   en_category: string;
 }
@@ -24,4 +21,4 @@ interface BlogPost {
   excerpt: string;
 }
 
-export type { AllPostInfos, BlogPost, PostData, PostInfo };
+export type { BlogPost, PostData, PostInfo };

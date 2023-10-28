@@ -26,6 +26,7 @@
 .li {
   @include utils.font-style($size: 'size5', $weight: 600, $style: italic);
 
+  display: block;
   z-index: 40;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;

@@ -1,9 +1,7 @@
-import { AllPostInfos } from '@/types/api/data.types';
+import { PostInfo } from '@/types/api/data.types';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-export const getPostsList = async (
-  category?: string
-): Promise<AllPostInfos[] | Error> => {
+export const getPostsList = async (category?: string): Promise<PostInfo[] | Error> => {
   const URL = category
     ? `${BASE_URL}/api/category/${category}`
     : `${BASE_URL}/api/category`;
@@ -13,7 +11,7 @@ export const getPostsList = async (
     if (!res.ok) {
       throw new Error('게시물을 가져오는 것에 실패했습니다.');
     }
-    const posts = (await res.json()) as AllPostInfos[];
+    const posts = (await res.json()) as PostInfo[];
     return posts;
   } catch (error) {
     console.error('알 수 없는 에러가 발생했습니다.', error);

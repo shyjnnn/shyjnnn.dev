@@ -1,11 +1,15 @@
 @use '@/styles/utils';
 
+.wrap {
+  width: 100%;
+}
+
 .shadow:hover {
   border-radius: 1rem;
   background-color: utils.$black;
 }
 
-.wrap {
+.container {
   position: relative;
   padding: 1rem;
   transition: transform 0.25s ease;
@@ -15,7 +19,7 @@
   @include utils.flexbox($direction: column, $justify: center, $align: flex-start);
 }
 
-.wrap:hover {
+.container:hover {
   transform: translate(0.25rem, -0.25rem);
 }
 

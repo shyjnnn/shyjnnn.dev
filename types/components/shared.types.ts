@@ -1,6 +1,6 @@
 interface SelectProps {
   categories: [string, number][];
-  initialOption: [string, number];
+  initialOption: string;
 }
 
 interface LayoutProps {

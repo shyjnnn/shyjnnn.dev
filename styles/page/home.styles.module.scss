@@ -1,0 +1,12 @@
+@use '@/styles/utils';
+
+.card-section {
+  @include utils.flexbox($direction: column, $justify: center, $align: flex-start);
+
+  width: 100%;
+  gap: 3rem;
+
+  @include utils.tablet {
+    gap: 2rem;
+  }
+}

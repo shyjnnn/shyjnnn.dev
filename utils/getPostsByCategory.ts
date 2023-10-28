@@ -24,6 +24,8 @@ async function getPostsByCategory(category: string) {
           id,
           title: matterResult.data.title as string,
           date: matterResult.data.date as string,
+          category: matterResult.data.category as string,
+          en_category: category,
         };
 
         return PostInfo;

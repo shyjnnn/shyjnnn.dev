@@ -1,5 +1,11 @@
 @use '@/styles/utils';
 
+.head {
+  @include utils.flexbox($direction: column, $justify: flex-start, $align: flex-start);
+
+  gap: 3rem;
+}
+
 .layout {
   width: 100%;
   max-width: 102.4rem;

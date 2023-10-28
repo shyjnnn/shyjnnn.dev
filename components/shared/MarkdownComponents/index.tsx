@@ -63,7 +63,6 @@ export const MarkdownComponents: Components = {
   },
 
   img: (props) => {
-    console.log(props);
     return (
       <Image
         src={props.src as string}

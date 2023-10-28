@@ -18,9 +18,9 @@ export default function Card({
   en_category: string;
 }) {
   return (
-    <Link href={`${en_category}/${slug}`}>
+    <Link className={cx('wrap')} href={`${en_category}/${slug}`}>
       <div className={cx('shadow')}>
-        <div className={cx('wrap')}>
+        <div className={cx('container')}>
           <p className={cx('category')}>{category}</p>
           <h3 className={cx('title')}>{title}</h3>
           <p className={cx('date')}>{date}</p>
