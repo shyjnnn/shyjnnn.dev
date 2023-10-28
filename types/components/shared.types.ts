@@ -1,3 +1,5 @@
+import { ButtonHTMLAttributes } from 'react';
+
 interface SelectProps {
   categories: [string, number][];
   initialOption: string;
@@ -8,4 +10,9 @@ interface LayoutProps {
   children: React.ReactNode;
   className?: string;
 }
-export type { LayoutProps, SelectProps };
+
+interface BtnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+}
+
+export type { BtnProps, LayoutProps, SelectProps };
