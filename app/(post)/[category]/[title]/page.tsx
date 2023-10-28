@@ -22,7 +22,6 @@ export default async function Post({
   const { content, data } = post;
   console.log(data); // NOTE : 제거해야함
   const tableOfContents = getMarkdownToc(content);
-  console.log(tableOfContents);
   return (
     <Layout tag='main' className='flex'>
       <article>

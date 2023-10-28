@@ -8,7 +8,6 @@ import { PostInfo } from '@/types/api/data.types';
 const cx = classNames.bind(styles);
 
 export default async function CategoryPage({ params }: { params: { category: string } }) {
-  console.log('params', params);
   const post: PostInfo[] | Error = await getPostsList(params?.category);
 
   if (post instanceof Error) throw Error;
