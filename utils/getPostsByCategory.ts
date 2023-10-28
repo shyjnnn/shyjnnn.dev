@@ -5,7 +5,7 @@ import path from 'path';
 import { PostInfo } from '@/types/api/data.types';
 
 async function getPostsByCategory(category: string) {
-  const categoryFolder = path.join(process.cwd(), '_posts', category);
+  const categoryFolder = path.join(process.cwd(), '__posts', category);
 
   try {
     const fileNames = await fs.readdir(categoryFolder);

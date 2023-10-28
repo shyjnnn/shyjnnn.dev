@@ -5,7 +5,7 @@ import path from 'path';
 import { PostInfo } from '@/types/api/data.types';
 
 async function getAllPostsList() {
-  const postFolder = path.join(process.cwd(), '_posts');
+  const postFolder = path.join(process.cwd(), '__posts');
 
   const allPosts: PostInfo[] = [];
 

@@ -1,5 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
+const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
 export const getCategories = async (): Promise<[string, number][] | Error> => {
   const URL = `${BASE_URL}/api/category-list`;
 
