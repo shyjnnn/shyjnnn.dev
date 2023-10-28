@@ -5,7 +5,7 @@ import path from 'path';
 async function getMarkdownFiles(category: string, title: string): Promise<string> {
   // 'post' 폴더의 경로
 
-  const filePath = path.join(process.cwd(), '_posts', `${category}`, `${title}.md`);
+  const filePath = path.join(process.cwd(), '__posts', `${category}`, `${title}.md`);
 
   // Markdown 파일 읽기
   const fileContents = await fs.readFile(filePath, 'utf-8');
