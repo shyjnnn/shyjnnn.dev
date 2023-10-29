@@ -14,6 +14,7 @@ import styles from './styles.module.scss';
 const cx = classNames.bind(styles);
 
 function Select(props: SelectProps, ref: Ref<HTMLButtonElement>) {
+  console.log(props.initialOption);
   const { categories, initialOption } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
