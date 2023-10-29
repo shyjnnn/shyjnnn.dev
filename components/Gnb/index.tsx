@@ -10,7 +10,7 @@ export default function Gnb() {
       <Link className={cx('logo')} href={'/'}>
         Shyjnnn.dev
       </Link>
-      <Link className={cx('about')} href={'/about'}>
+      <Link className={cx('about')} href={'/'}>
         About
       </Link>
     </header>
