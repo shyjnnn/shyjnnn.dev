@@ -10,12 +10,11 @@ import { PostInfo } from '@/types/api/data.types';
 
 const cx = classNames.bind(styles);
 
-export default async function Home({ params }: { params: { category: string } }) {
+export default async function Home() {
   // const categories: [string, number][] | Error = await getCategories();
   // if (categories instanceof Error) {
   //   throw Error;
   // }
-  console.log(params?.category);
 
   const allPosts: PostInfo[] | Error = await getPostsList();
 

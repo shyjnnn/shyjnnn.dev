@@ -15,9 +15,9 @@ export default async function CategoryPage({ params }: { params: { category: str
   // if (categories instanceof Error) {
   //   throw Error;
   // }
-  console.log(params?.category);
+  console.log(params.category);
 
-  const post: PostInfo[] | Error = await getPostsList(params?.category);
+  const post: PostInfo[] | Error = await getPostsList(params.category);
 
   if (post instanceof Error) throw Error;
   return (
