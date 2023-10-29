@@ -13,12 +13,13 @@ export default async function CategoryLayout({
 }) {
   const categories: [string, number][] | Error = await getCategories();
   if (categories instanceof Error) throw Error;
-
   return (
     <Layout tag='main' className='head'>
       <Select
         categories={categories}
-        initialOption={params?.category ? params.category[0] : 'all'}
+        initialOption={
+          params.category && params.category in categories ? params.category[0] : 'all'
+        }
       />
       {children}
     </Layout>
