@@ -18,7 +18,7 @@ export default function NotFound({
     <div>
       <h2>존재하지 않는 페이지입니다.</h2>
       <Btn>
-        <Link href={'/'} />
+        <Link href='/' />
       </Btn>
     </div>
   );
