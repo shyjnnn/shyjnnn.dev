@@ -4,7 +4,7 @@ import { Components } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-import createId from '@/utils/createId';
+import { createId } from '@/utils/getString';
 
 import styles from './styles.module.scss';
 

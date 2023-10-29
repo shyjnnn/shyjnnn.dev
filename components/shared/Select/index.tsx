@@ -6,7 +6,7 @@ import { forwardRef, Ref, useState } from 'react';
 
 import useOutsideClick from '@/hooks/useOutsideClick';
 import { SelectProps } from '@/types/components/shared.types';
-import createId from '@/utils/createId';
+import { createId } from '@/utils/getString';
 
 import HeadTitle from '../HeadTitle';
 import styles from './styles.module.scss';
