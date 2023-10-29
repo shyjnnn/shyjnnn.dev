@@ -18,7 +18,7 @@ export default async function CategoryLayout({
       <Select
         categories={categories}
         initialOption={
-          params.category && params.category in categories ? params.category[0] : 'all'
+          params.category && params.category[0] in categories ? params.category[0] : 'all'
         }
       />
       {children}
