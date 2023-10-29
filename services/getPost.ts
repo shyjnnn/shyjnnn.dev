@@ -8,7 +8,7 @@ export const getPost = async ({
   category: string;
   title: string;
 }): Promise<BlogPost | Error> => {
-  const URL = `${BASE_URL}/api/post/${category}/${title}`;
+  const URL = `https://${BASE_URL}/api/post/${category}/${title}`;
 
   try {
     const res = await fetch(URL, { cache: 'force-cache' });
