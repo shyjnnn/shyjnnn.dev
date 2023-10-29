@@ -12,6 +12,7 @@ export default async function CategoryLayout({
   params: { category: string };
 }) {
   const categories: [string, number][] | Error = await getCategories();
+  console.log(params.category);
   if (categories instanceof Error) {
     console.log('레이아웃 에러임');
     throw Error;
