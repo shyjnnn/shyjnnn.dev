@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import Gnb from '@/components/Gnb';
+import Layout from '@/components/shared/Layout';
 
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
@@ -19,7 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='ko'>
       <body className={pretendard.className}>
         <Gnb />
-        {children}
+        <Layout tag='main' className='head'>
+          {children}
+        </Layout>
       </body>
     </html>
   );
