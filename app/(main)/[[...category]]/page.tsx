@@ -1,14 +1,14 @@
-import classNames from 'classnames/bind';
+// import classNames from 'classnames/bind';
 
-import Card from '@/components/shared/Card';
+// import Card from '@/components/shared/Card';
 import Layout from '@/components/shared/Layout';
 import Select from '@/components/shared/Select';
 import { getCategories } from '@/services/getCategories';
 import { getPostsList } from '@/services/getPostsList';
-import styles from '@/styles/page/home.styles.module.scss';
+// import styles from '@/styles/page/home.styles.module.scss';
 import { PostInfo } from '@/types/api/data.types';
 
-const cx = classNames.bind(styles);
+// const cx = classNames.bind(styles);
 
 export default async function CategoryPage({ params }: { params: { category: string } }) {
   const categories: [string, number][] | Error = await getCategories();
@@ -26,7 +26,7 @@ export default async function CategoryPage({ params }: { params: { category: str
         initialOption={params?.category ? params.category[0] : 'all'}
       />
 
-      <section className={cx('card-section')}>
+      {/* <section className={cx('card-section')}>
         {post.length !== 0 &&
           post.map((card) => (
             <Card
@@ -38,7 +38,7 @@ export default async function CategoryPage({ params }: { params: { category: str
               en_category={card.en_category}
             />
           ))}
-      </section>
+      </section> */}
     </Layout>
   );
 }
