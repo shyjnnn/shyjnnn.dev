@@ -12,10 +12,6 @@
   @include utils.font-style($size: 'size1', $weight: 800, $style: italic);
 }
 
-.title:hover {
-  text-decoration: underline;
-}
-
 .count {
   @include utils.font-style($size: 'size6', $weight: 400, $style: italic);
 
