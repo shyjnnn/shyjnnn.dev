@@ -17,11 +17,16 @@ function flatten(children: ReactNode): string {
   }, '');
 }
 
-export default function createId(children: ReactNode): string {
+export function createId(children: ReactNode): string {
   const text = flatten(children);
   return text
-    .replace(/#/g, '')
+    .replace(/[#`()*]/g, '')
     .replace(/ /g, '-')
+    .replace(/-+/g, '-')
     .replace(/(\d+)\.\s*(\w)/g, '$1.$2')
     .toLowerCase();
+}
+
+export function getRawString(text: string) {
+  return text.replace(/[*`₩]/g, '');
 }
