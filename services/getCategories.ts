@@ -1,6 +1,10 @@
-const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
+const BASE_URL =
+  process.env.NODE_ENV === 'development'
+    ? process.env.LOCAL_BASE_URL
+    : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+
 export const getCategories = async (): Promise<[string, number][] | Error> => {
-  const URL = `https://${BASE_URL}/api/category-list`;
+  const URL = `${BASE_URL}/api/category-list`;
   console.log(URL);
 
   try {

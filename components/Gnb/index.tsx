@@ -7,10 +7,10 @@ const cx = classNames.bind(styles);
 export default function Gnb() {
   return (
     <header className={cx('gnb')}>
-      <Link className={cx('logo')} href={'/'}>
+      <Link className={cx('logo')} href='/'>
         Shyjnnn.dev
       </Link>
-      <Link className={cx('about')} href={'/'}>
+      <Link className={cx('about')} href='/'>
         About
       </Link>
     </header>
