@@ -132,7 +132,7 @@ DELETE FROM table_name WHERE condition;
   	ON	table1.column_name	=table2.column_name;
   ```
 
-## `**GROUP BY`** - **그룹화\*\*
+## `GROUP BY` - 그룹화
 
 결과 집합에서 하나 이상의 열로 데이터를 그룹화 할 수 있다.
 
@@ -144,7 +144,7 @@ SELECT column1, AVG(column2) AS "평균"
 	GROUP BY column3;
 ```
 
-### 집계 함수 (_Aggregate Function_)
+### 집계 함수 (Aggregate Function)
 
 - `SUM()` : 컬럼의 합계를 반환
 - `AVG()` : 컬럼의 평균을 반환
