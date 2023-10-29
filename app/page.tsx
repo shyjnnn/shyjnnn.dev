@@ -11,9 +11,11 @@ export default async function Home() {
   const allPosts: PostInfo[] | Error = await getPostsList();
 
   if (allPosts instanceof Error) throw Error;
+  console.log(allPosts);
   return (
     <section className={cx('card-section')}>
-      {allPosts.length !== 0 &&
+      {allPosts &&
+        allPosts.length !== 0 &&
         allPosts.map((card) => (
           <Card
             key={card.id}
