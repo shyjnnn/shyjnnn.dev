@@ -12,7 +12,10 @@ export default async function CategoryLayout({
   params: { category: string };
 }) {
   const categories: [string, number][] | Error = await getCategories();
-  if (categories instanceof Error) throw Error;
+  if (categories instanceof Error) {
+    console.log('레이아웃 에러임');
+    throw Error;
+  }
 
   return (
     <Layout tag='main' className='head'>

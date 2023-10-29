@@ -5,7 +5,6 @@ const BASE_URL =
 
 export const getCategories = async (): Promise<[string, number][] | Error> => {
   const URL = `${BASE_URL}/api/category-list`;
-  console.log(URL);
 
   try {
     const res = await fetch(URL, { cache: 'force-cache' });

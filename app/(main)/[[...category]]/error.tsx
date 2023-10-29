@@ -1,4 +1,4 @@
-'use client'; // Error components must be Client Components
+'use client';
 
 import { useEffect } from 'react';
 
@@ -17,7 +17,7 @@ export default function Error({
 
   return (
     <div>
-      <h2>에러가 발생했습니다.!</h2>
+      <h2>에러가 발생했습니다!</h2>
       <Btn onClick={() => reset()}>다시 시도하기</Btn>
     </div>
   );
