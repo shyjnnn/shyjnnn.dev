@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind';
-import Image from 'next/image';
 import { Components } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -64,7 +63,7 @@ export const MarkdownComponents: Components = {
 
   img: (props) => {
     return (
-      <Image
+      <img
         src={props.src as string}
         alt={props.alt as string}
         className={cx('img')}
