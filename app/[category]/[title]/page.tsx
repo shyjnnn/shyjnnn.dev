@@ -31,7 +31,9 @@ export default async function Post({
         <Layout tag='article'>
           <PostContentBody content={content} />
         </Layout>
-        <TableOfContents tableOfContents={tableOfContents} />
+        {tableOfContents.length !== 0 && (
+          <TableOfContents tableOfContents={tableOfContents} />
+        )}
       </Layout>
       <Giscus />
     </Layout>
