@@ -1,6 +1,6 @@
 ---
 title: Domain Name Resolution
-date: 2023년 5월 1일
+date: 2023-05-01
 slug: Domain-Name-Resolution
 tags: CS, Network
 category: 🙏잡학사전

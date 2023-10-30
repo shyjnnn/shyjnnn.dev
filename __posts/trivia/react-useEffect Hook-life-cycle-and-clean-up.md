@@ -1,6 +1,6 @@
 ---
 title: React useEffect Hook의 Life Cycle와 Clean-up
-date: 2023년 4월 27일
+date: 2023-04-27
 slug: React-useEffect-Hook의-Life-Cycle와-Clean-up
 tags: React.js
 category: 🙏잡학사전

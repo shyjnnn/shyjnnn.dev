@@ -1,6 +1,6 @@
 ---
 title: 이제는 CRA보다 Vite?!
-date: 2023년 5월 1일
+date: 2023-05-01
 slug: 이제는-CRA보다-Vite
 tags: React.js
 category: 🙏잡학사전

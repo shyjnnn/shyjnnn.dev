@@ -1,6 +1,6 @@
 ---
 title: CORS 에러란?
-date: 2023년 6월 20일
+date: 2023-06-20
 slug: CORS-에러란
 tags: CS, Network
 category: 🙏잡학사전

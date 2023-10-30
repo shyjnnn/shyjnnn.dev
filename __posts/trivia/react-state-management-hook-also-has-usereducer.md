@@ -1,6 +1,6 @@
 ---
 title: React 상태 관리 hook에는 useReducer도 있다.
-date: 2023년 7월 4일
+date: 2023-07-04
 slug: React-상태-관리-hook에는-useReducer도-있다
 tags: React.js
 category: 🙏잡학사전

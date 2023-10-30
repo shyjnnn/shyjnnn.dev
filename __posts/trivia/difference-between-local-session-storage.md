@@ -1,6 +1,6 @@
 ---
 title: local & session Strorage 차이
-date: 2023년 5월 30일
+date: 2023-05-30
 slug: local-session-strorage-차이
 tags: CS
 category: 🙏잡학사전

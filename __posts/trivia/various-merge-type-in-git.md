@@ -1,6 +1,6 @@
 ---
 title: Git의 다양한 Merge Type들
-date: 2023년 3월 31일
+date: 2023-03-31
 slug: Git의-다양한-Merge-Type들
 tags: Git
 category: 🙏잡학사전

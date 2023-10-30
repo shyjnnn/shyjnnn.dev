@@ -1,6 +1,6 @@
 ---
 title: Chrome 개발자 도구 톺아보기
-date: 2023년 5월 31일
+date: 2023-05-31
 slug: Chrome-개발자-도구-톺아보기
 tags: 개발자도구
 category: 🙏잡학사전

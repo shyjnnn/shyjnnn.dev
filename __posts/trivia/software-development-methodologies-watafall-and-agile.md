@@ -1,6 +1,6 @@
 ---
 title: 소프트웨어 개발 방법론 - Watafall 과 Agile
-date: 2023년 6월 27일
+date: 2023-06-27
 slug: 소프트웨어-개발-방법론-Watafall과-Agile
 tags: CS
 category: 🙏잡학사전

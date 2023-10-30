@@ -1,6 +1,6 @@
 ---
 title: Next.js를 사용하는 이유?
-date: 2023년 5월 30일
+date: 2023-05-30
 slug: Next.js를-사용하는-이유
 tags: Next.js
 category: 🙏잡학사전

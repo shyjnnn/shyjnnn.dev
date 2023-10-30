@@ -1,6 +1,6 @@
 ---
 title: TypeScript를 왜 사용할까?
-date: 2023년 6월 6일
+date: 2023-06-06
 slug: TypeScript를-왜-사용할까
 tags: JavaScript, Typescript
 category: 🙏잡학사전

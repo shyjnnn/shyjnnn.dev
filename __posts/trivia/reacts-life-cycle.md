@@ -1,6 +1,6 @@
 ---
 title: react의 생명주기
-date: 2023년 5월 2일
+date: 2023-05-02
 slug: react의-생명주기
 tags: React.js
 category: 🙏잡학사전

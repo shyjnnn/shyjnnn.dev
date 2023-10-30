@@ -1,6 +1,6 @@
 ---
 title: Git의 checkout과 reset의 차이점(with switch)
-date: 2023년 3월 31일
+date: 2023-03-31
 slug: Git의-checkout과-reset의-차이점
 tags: Git
 category: 🙏잡학사전

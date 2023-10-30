@@ -1,6 +1,6 @@
 ---
 title: HTTP가 뭘까?
-date: 2023년 6월 27일
+date: 2023-06-27
 slug: HTTP가-뭘까
 tags: Network
 category: 🙏잡학사전

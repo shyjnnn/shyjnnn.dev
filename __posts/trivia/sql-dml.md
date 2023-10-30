@@ -1,5 +1,5 @@
 ---
-date: 2023년 10월 3일
+date: 2023-10-03
 slug: SQL-DML-정리
 tags: SQL
 summary: sql 총정리
