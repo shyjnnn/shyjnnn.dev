@@ -27,5 +27,5 @@ export default function Giscus() {
     ref.current.appendChild(scriptElem);
   }, []);
 
-  return <section style={{ width: '100%' }} ref={ref} />;
+  return <section style={{ width: '100%', marginTop: '10rem' }} ref={ref} />;
 }
