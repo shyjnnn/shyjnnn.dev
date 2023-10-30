@@ -14,5 +14,5 @@
 }
 
 .flex {
-  @include utils.flexbox($justify: center, $align: flex-start);
+  @include utils.flexbox($justify: space-between, $align: flex-start);
 }
