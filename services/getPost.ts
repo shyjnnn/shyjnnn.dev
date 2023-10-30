@@ -1,5 +1,5 @@
+import { BASE_URL } from '@/constants/api';
 import { BlogPost } from '@/types/api/data.types';
-const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
 
 export const getPost = async ({
   category,
@@ -8,7 +8,7 @@ export const getPost = async ({
   category: string;
   title: string;
 }): Promise<BlogPost | Error> => {
-  const URL = `https://${BASE_URL}/api/post/${category}/${title}`;
+  const URL = `${BASE_URL}/api/post/${category}/${title}`;
 
   try {
     const res = await fetch(URL, { cache: 'force-cache' });
