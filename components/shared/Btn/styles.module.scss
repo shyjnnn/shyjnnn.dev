@@ -1,7 +1,7 @@
 @use '@/styles/utils';
 
 .btn {
-  @include utils.font-style($size: 'size6', $weight: 400);
+  @include utils.font-style($size: 'size5', $weight: 400);
 
   padding: 1rem;
   border-radius: 1rem;

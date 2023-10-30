@@ -9,14 +9,14 @@
 }
 
 .title {
-  @include utils.font-style($size: 'size6', $weight: 400, $style: italic);
+  @include utils.font-style($size: 'size5', $weight: 400, $style: italic);
 
   &:hover {
     text-decoration: underline;
   }
 
   &.current {
-    @include utils.font-style($size: 'size6', $weight: 600, $style: italic);
+    @include utils.font-style($size: 'size5', $weight: 600, $style: italic);
 
     color: utils.$blue;
     text-decoration: underline;
@@ -24,7 +24,7 @@
 }
 
 .count {
-  @include utils.font-style($size: 'size7', $weight: 400, $style: italic);
+  @include utils.font-style($size: 'size6', $weight: 400, $style: italic);
 
   margin: 0;
   color: utils.$gray;
