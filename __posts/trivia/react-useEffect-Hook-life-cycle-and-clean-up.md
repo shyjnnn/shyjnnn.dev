@@ -10,22 +10,21 @@ category: 🙏잡학사전
 
 ## useEffect Hook 사용법
 
-```
+```javascript
 useEffect(<function>, <array>);
-
 ```
 
 `<function>`은 useEffect가 실행할 콜백 함수이며, `<array>`는 콜백 함수를 실행시킬 조건으로, dependency 배열이라고도 부릅니다.
 
-```
+```javascript
 useEffect(() => {
-    console.log('Effect function is called.');
+  console.log('Effect function is called.');
 
-    return () => { //이게 cleanup 함수
-      console.log('Cleanup function is called.');
-    };
-  }, [count]);
-
+  return () => {
+    //이게 cleanup 함수
+    console.log('Cleanup function is called.');
+  };
+}, [count]);
 ```
 
 useEffect Hook은 컴포넌트가 렌더링된 후 DOM에 적용된 후 실행되며, 컴포넌트가 다시 렌더링될 때마다 실행됩니다. useEffect dependency에 따라 실행 여부가 달라집니다.
@@ -60,27 +59,26 @@ useEffect 콜백 함수가 실행됩니다.
 
 이때, cleanup함수는 이전에 등록된 cleanup함수가 실행되는 것입니다.
 
-```
-import { useState, useEffect } from "react";
+```javascript
+import { useState, useEffect } from 'react';
 
 export default function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log("useEffect !");
+    console.log('useEffect !');
     return () => {
       console.log(count);
     };
   }, [count]);
 
   return (
-    <div className="App">
+    <div className='App'>
       <h2>{count}</h2>
       <button onClick={() => setCount(count + 1)}>+</button>
     </div>
   );
 }
-
 ```
 
 이 코드를 실제로 실행해보면
@@ -92,14 +90,13 @@ export default function App() {
 
 즉, clean up 함수를 사용하면 이전에 등록된 작업을 취소하고 새로운 작업을 수행할 수 있습니다. 이것은 예를 들어 타이머나 setInterval 함수와 같은 것을 사용할 때 유용합니다. clean up 함수를 사용하면 이전에 등록된 타이머나 setInterval 함수를 취소하고, 새로운 함수를 등록할 수 있습니다.
 
-```
+```javascript
 useEffect(() => {
   const intervalId = setInterval(() => {
     // some task
   }, 1000);
   return () => clearInterval(intervalId);
 }, []);
-
 ```
 
 위 코드에서 setInterval 함수는 1초마다 실행되는 작업을 수행합니다. 그리고 clean up 함수에서는 clearInterval 함수를 사용하여 이전에 등록된 작업을 취소합니다. 이렇게 하면, 컴포넌트가 언마운트되기 전에 등록된 작업을 취소할 수 있습니다.

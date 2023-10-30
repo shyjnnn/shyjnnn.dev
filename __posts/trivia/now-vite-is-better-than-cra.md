@@ -58,9 +58,9 @@ Vite에서 HMR은 native ESM을 통해 수행된다. Vite는 편집된 모듈과
        - `resolve` 함수는 Node.js의 내장 모듈인 `path`에서 제공된다.
 
      ```jsx
-     import { defineConfig } from "vite";
-     import react from "@vitejs/plugin-react-swc";
-     import { resolve } from "path"; // 추가
+     import { defineConfig } from 'vite';
+     import react from '@vitejs/plugin-react-swc';
+     import { resolve } from 'path'; // 추가
 
      // <https://vitejs.dev/config/>
      export default defineConfig({
@@ -69,10 +69,10 @@ Vite에서 HMR은 native ESM을 통해 수행된다. Vite는 편집된 모듈과
        //추가
        resolve: {
          alias: [
-           { find: "@", replacement: resolve(__dirname, "src") },
+           { find: '@', replacement: resolve(__dirname, 'src') },
            {
-             find: "@components",
-             replacement: path.resolve(__dirname, "src/components"),
+             find: '@components',
+             replacement: path.resolve(__dirname, 'src/components'),
            },
          ],
        },
@@ -102,7 +102,6 @@ Vite에서 HMR은 native ESM을 통해 수행된다. Vite는 편집된 모듈과
            },
        ...
        };
-
        ```
 
    `.eslintrc.cjs` 와 `vite.config.js`에서 alias 하는 것의 차이
@@ -116,7 +115,7 @@ Vite에서 HMR은 native ESM을 통해 수행된다. Vite는 편집된 모듈과
 
 2. **Environment variables**
 
-   ```
+   ```shell
    //Instead of this
    REACT_APP_ API_KEY = 1234567890..
    //Use this

@@ -155,12 +155,12 @@ a 변수는 첫 번째로 실행 중인 실행 컨텍스트인 plus 함수의 `R
 
 ```jsx
 function makeFunc() {
-  let name = "eva";
+  let name = 'eva';
   function printNameWithAge() {
-    console.log("24살 " + name);
+    console.log('24살 ' + name);
   }
   function printNameWithGender() {
-    console.log("여성 " + name);
+    console.log('여성 ' + name);
   }
   return { name, printNameWithAge, printNameWithGender };
 }
