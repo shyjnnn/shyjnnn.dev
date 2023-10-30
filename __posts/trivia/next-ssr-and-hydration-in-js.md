@@ -1,6 +1,6 @@
 ---
 title: Next.js에서의 SSR과 hydration
-date: 2023년 6월 1일
+date: 2023-06-01
 slug: Next.js에서의-SSR과-hydration
 tags: Next.js
 category: 🙏잡학사전

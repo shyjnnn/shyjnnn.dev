@@ -1,6 +1,6 @@
 ---
 title: 리액트의 Strict 모드
-date: 2023년 5월 3일
+date: 2023-05-03
 slug: 리액트의-strict-모드
 tags: React.js
 category: 🙏잡학사전

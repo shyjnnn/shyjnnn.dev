@@ -1,6 +1,6 @@
 ---
 title: 공유 자원과 임계 영역 (feat. 뮤텍스와 세마포어 등)
-date: 2023년 6월 26일
+date: 2023-06-26
 slug: 공유-자원과-임계-영역-feat.뮤텍스와-세마포어-등
 author: eva
 tags: CS

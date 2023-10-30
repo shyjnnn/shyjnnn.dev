@@ -1,6 +1,6 @@
 ---
 title: 웹 페이지 렌더링 방식 CSR, SSR, SSG
-date: 2023년 5월 30일
+date: 2023-05-30
 slug: 웹-페이지-렌더링-방식-CSR-SSR-SSG
 tags: CS, Network
 category: 🙏잡학사전

@@ -1,6 +1,6 @@
 ---
 title: This 탐구생활
-date: 2023년 4월 25일
+date: 2023-04-25
 slug: This-탐구생활
 tags: JavaScript
 category: 🙏잡학사전

@@ -1,6 +1,6 @@
 ---
 title: TypeScript의 동작 원리
-date: 2023년 6월 8일
+date: 2023-06-08
 slug: TypeScript의-동작-원리
 tags: Typescript
 category: 🙏잡학사전

@@ -1,6 +1,6 @@
 ---
 title: 렉시컬 스코프란?
-date: 2023년 3월 31일
+date: 2023-03-31
 slug: 렉시컬-스코프란
 tags: JavaScript
 type: Post

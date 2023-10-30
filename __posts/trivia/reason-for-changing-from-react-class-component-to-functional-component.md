@@ -1,6 +1,6 @@
 ---
 title: React 클래스형 컴포넌트에서 함수형 컴포넌트로 바뀐 이유?
-date: 2023년 5월 10일
+date: 2023-05-10
 slug: React-클래스형-컴포넌트에서-함수형-컴포넌트로-바뀐-이유
 tags: React.js
 category: 🙏잡학사전
