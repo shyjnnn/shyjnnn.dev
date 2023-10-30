@@ -1,7 +1,11 @@
+import classNames from 'classnames/bind';
+
 import { getCategories } from '@/services/getCategories';
 
 import CategoryText from '../shared/CategoryText';
 import HeadTitle from '../shared/HeadTitle';
+import styles from './styles.module.scss';
+const cx = classNames.bind(styles);
 
 export default async function Category({
   currentCategory = 'all',
@@ -13,14 +17,16 @@ export default async function Category({
   return (
     <div>
       <HeadTitle text={currentCategory} count={0} />
-      {categories.map((category) => (
-        <CategoryText
-          key={category[0]}
-          text={category[0]}
-          count={category[1]}
-          isCurrent={currentCategory === category[0]}
-        />
-      ))}
+      <div className={cx('category-list')}>
+        {categories.map((category) => (
+          <CategoryText
+            key={category[0]}
+            text={category[0]}
+            count={category[1]}
+            isCurrent={currentCategory === category[0]}
+          />
+        ))}
+      </div>
     </div>
   );
 }
