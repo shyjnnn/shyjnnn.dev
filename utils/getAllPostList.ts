@@ -29,7 +29,7 @@ async function getAllPostsList() {
         const postLists: PostInfo = {
           id,
           title: matterResult.data.title as string,
-          date: matterResult.data.date as string,
+          date: matterResult.data.date as Date,
           category: matterResult.data.category as string,
           en_category: category,
         };
