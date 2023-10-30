@@ -19,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ko'>
       <body className={pretendard.className}>
-        <Gnb />
+        <Layout className='sticky'>
+          <Gnb />
+        </Layout>
         <Layout tag='main' className='head'>
           {children}
         </Layout>
