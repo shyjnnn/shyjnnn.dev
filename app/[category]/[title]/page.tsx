@@ -1,3 +1,4 @@
+import Giscus from '@/components/Giscus';
 import Layout from '@/components/shared/Layout';
 import PostContentBody from '@/components/shared/PostContentBody';
 import Title from '@/components/shared/Title';
@@ -32,6 +33,7 @@ export default async function Post({
         </article>
         <TableOfContents tableOfContents={tableOfContents} />
       </Layout>
+      <Giscus />
     </Layout>
   );
 }
