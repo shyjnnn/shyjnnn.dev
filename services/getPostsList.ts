@@ -1,10 +1,11 @@
 import { PostInfo } from '@/types/api/data.types';
 const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
 
-export const getPostsList = async (category?: string): Promise<PostInfo[] | Error> => {
-  const URL = category
-    ? `https://${BASE_URL}/api/category/${category}`
-    : `https://${BASE_URL}/api/category`;
+export const getPostsList = async (category: string): Promise<PostInfo[] | Error> => {
+  const URL =
+    category !== 'all'
+      ? `https://${BASE_URL}/api/category/${category}`
+      : `https://${BASE_URL}/api/category`;
 
   try {
     const res = await fetch(URL, { cache: 'force-cache' });
