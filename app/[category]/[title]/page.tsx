@@ -28,9 +28,9 @@ export default async function Post({
     <Layout className='head'>
       <Title title={data.title} date={data.date} tags={stringToArray(data.tags)} />
       <Layout tag='main' className='flex'>
-        <article>
+        <Layout tag='article'>
           <PostContentBody content={content} />
-        </article>
+        </Layout>
         <TableOfContents tableOfContents={tableOfContents} />
       </Layout>
       <Giscus />
