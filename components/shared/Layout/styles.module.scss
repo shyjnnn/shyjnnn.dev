@@ -8,9 +8,13 @@
 
 .layout {
   width: 100%;
-  max-width: 102.4rem;
+  max-width: 100rem;
   height: 100%;
   margin: 0 auto;
+
+  @include utils.tablet {
+    max-width: 70rem;
+  }
 }
 
 .flex {
