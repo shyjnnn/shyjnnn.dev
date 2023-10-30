@@ -35,7 +35,8 @@
 
 .codeblock {
   width: 100%;
-  overflow: auto;
+
+  // overflow: auto;
   border-radius: 1rem;
 }
 
@@ -85,4 +86,8 @@
 
 .aside::first-line {
   font-weight: 700;
+}
+
+.p {
+  @include utils.font-style($size: 'size5', $weight: 400);
 }
