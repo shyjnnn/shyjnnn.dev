@@ -9,7 +9,7 @@
 }
 
 .date {
-  @include utils.font-style($size: 'size6', $weight: 400);
+  @include utils.font-style($size: 'size5', $weight: 400);
 
   margin-bottom: 1.6rem;
   color: utils.$black;

@@ -26,43 +26,27 @@ $breakpoint-mobile: 768px;
 
 @mixin font-style($size: 'size2', $weight: 400, $style: normal) {
   @if $size == 'size1' {
+    font-size: 5rem;
+    font-style: $style;
+    font-weight: $weight;
+  } @else if $size == 'size2' {
     font-size: 4rem;
     font-style: $style;
     font-weight: $weight;
-
-    @include tablet {
-      font-size: 3rem;
-    }
-  } @else if $size == 'size2' {
+  } @else if $size == 'size3' {
     font-size: 3.6rem;
     font-style: $style;
     font-weight: $weight;
-
-    @include tablet {
-      font-size: 2.4rem;
-    }
-  } @else if $size == 'size3' {
+  } @else if $size == 'size4' {
     font-size: 2.4rem;
     font-style: $style;
     font-weight: $weight;
-
-    @include tablet {
-      font-size: 1.8rem;
-    }
-  } @else if $size == 'size4' {
-    font-size: 1.6rem;
-    font-style: $style;
-    font-weight: $weight;
   } @else if $size == 'size5' {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-style: $style;
     font-weight: $weight;
   } @else if $size == 'size6' {
     font-size: 1.2rem;
-    font-style: $style;
-    font-weight: $weight;
-  } @else if $size == 'size7' {
-    font-size: 0.8rem;
     font-style: $style;
     font-weight: $weight;
   }

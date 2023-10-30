@@ -13,7 +13,7 @@
 }
 
 .h4 {
-  @include utils.font-style($size: 'size6', $weight: 700, $style: normal);
+  @include utils.font-style($size: 'size5', $weight: 700, $style: normal);
 
   margin-top: 2rem;
 }
