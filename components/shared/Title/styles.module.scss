@@ -2,10 +2,12 @@
 
 .wrap {
   @include utils.flexbox($direction: column, $justify: center, $align: flex-start);
+
+  width: 100%;
 }
 
 .title {
-  @include utils.font-style($size: 'size2', $weight: 700);
+  @include utils.font-style($size: 'size1', $weight: 700);
 }
 
 .date {

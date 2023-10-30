@@ -26,6 +26,7 @@ export default function Title({
           ))}
         </div>
       </nav>
+      <hr />
     </div>
   );
 }

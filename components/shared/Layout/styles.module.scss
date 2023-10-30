@@ -8,7 +8,7 @@
 
 .layout {
   width: 100%;
-  max-width: 100rem;
+  max-width: 138rem;
   height: 100%;
   margin: 0 auto;
 
@@ -19,4 +19,11 @@
 
 .flex {
   @include utils.flexbox($justify: space-between, $align: flex-start);
+}
+
+.sticky {
+  position: sticky;
+  z-index: 40;
+  top: 0;
+  background-color: utils.$white;
 }
