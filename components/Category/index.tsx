@@ -14,9 +14,12 @@ export default async function Category({
 }) {
   const categories: [string, number][] | Error = await getCategories();
   if (categories instanceof Error) throw Error;
+
+  const category = categories.find((category) => category[0] === currentCategory);
+  const count = category ? category[1] : 0;
   return (
-    <div>
-      <HeadTitle text={currentCategory} count={0} />
+    <div className={cx('wrap')}>
+      <HeadTitle text={currentCategory} count={count} />
       <div className={cx('category-list')}>
         {categories.map((category) => (
           <CategoryText

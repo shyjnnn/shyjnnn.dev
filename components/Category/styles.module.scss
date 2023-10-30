@@ -1,11 +1,15 @@
 @use '@/styles/utils';
 
-.category-list{
-    @include utils.flexbox($direction: row, $justify: center, $align: center);
+.wrap {
+  padding: 8rem 0 4rem;
+}
 
-    flex-wrap: wrap;
-    width: fit-content;
-    max-width: 60rem;
-    margin: 1rem auto 3rem;
-    gap: 1rem
+.category-list {
+  @include utils.flexbox($direction: row, $justify: center, $align: center);
+
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 60rem;
+  margin: 1rem auto;
+  gap: 1rem;
 }

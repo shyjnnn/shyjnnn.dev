@@ -29,7 +29,7 @@
 }
 
 .title {
-  @include utils.font-style($size: 'size4', $weight: 700);
+  @include utils.font-style($size: 'size4', $weight: 600);
 }
 
 .date {

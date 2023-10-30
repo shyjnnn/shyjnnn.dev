@@ -25,6 +25,8 @@ $breakpoint-mobile: 768px;
 }
 
 @mixin font-style($size: 'size2', $weight: 400, $style: normal) {
+  line-height: 2;
+
   @if $size == 'size1' {
     font-size: 5rem;
     font-style: $style;
