@@ -3,7 +3,7 @@ import '@/styles/global.scss';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-// import Gnb from '@/components/Gnb';
+import Gnb from '@/components/Gnb';
 import Layout from '@/components/shared/Layout';
 
 const pretendard = localFont({
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ko'>
       <body className={pretendard.className}>
-        {/* <Gnb /> */}
+        <Gnb />
         <Layout tag='main' className='head'>
           {children}
         </Layout>
