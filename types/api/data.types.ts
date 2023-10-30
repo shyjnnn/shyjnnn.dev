@@ -1,7 +1,7 @@
 interface PostInfo {
   id: string;
   title: string;
-  date: string;
+  date: Date;
   category: string;
   en_category: string;
 }
