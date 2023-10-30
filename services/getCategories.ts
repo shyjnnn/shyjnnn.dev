@@ -1,6 +1,7 @@
-const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
+import { BASE_URL } from '@/constants/api';
+
 export const getCategories = async (): Promise<[string, number][] | Error> => {
-  const URL = `https://${BASE_URL}/api/category-list`;
+  const URL = `${BASE_URL}/api/category-list`;
   console.log(URL);
 
   try {
