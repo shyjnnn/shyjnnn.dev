@@ -27,23 +27,22 @@ category: 🙏잡학사전
 
 ### class 형 컴포넌트의 재앙
 
-```
+```javascript
 class ProfilePage extends React.Component {
-	showMessage = () => {
-		alert(`${this.props.user} 를 팔로우 했습니다`);
-	}
+  showMessage = () => {
+    alert(`${this.props.user} 를 팔로우 했습니다`);
+  };
 
-	handleClick = () => {
-		// const {user} = this.props; 이렇게 미리 할당해둬서 해결은 가능
+  handleClick = () => {
+    // const {user} = this.props; 이렇게 미리 할당해둬서 해결은 가능
     // setTimeout(() => this.showMessage(user), 3000);
-		setTimeout(this.showMessage, 5000); // this.showMessage 대신 user 넣으면 해결 가능
-	}
+    setTimeout(this.showMessage, 5000); // this.showMessage 대신 user 넣으면 해결 가능
+  };
 
-	render() {
-		return <button onClick={this.handleClick}>Follow</button>;
-	}
+  render() {
+    return <button onClick={this.handleClick}>Follow</button>;
+  }
 }
-
 ```
 
 **A 유저를 팔로우 한 후** 빛의 속도로 3초만에 B 유저 프로필로 이동하면, "B를 팔로우했습니다" 라는 alert 메세지가 나타납니다. 그러나 나는 A 유저를 팔로우 했습니다!🤷
@@ -59,20 +58,17 @@ class ProfilePage extends React.Component {
 
 ### 함수형 컴포넌트로 바꾸면?
 
-```
+```javascript
 function ProfilePage(props) {
-	showMessage = () => {
-		alert(`${props.user}를 팔로우 했습니다`);
-	}
+  showMessage = () => {
+    alert(`${props.user}를 팔로우 했습니다`);
+  };
 
-	handleClick = () => {
-		setTimeout(showMessage, 5000);
-	}
-	return (
-		<button onClick={handleClick}>Follow</button>
-	)
+  handleClick = () => {
+    setTimeout(showMessage, 5000);
+  };
+  return <button onClick={handleClick}>Follow</button>;
 }
-
 ```
 
 페이지를 B로 이동해도 팔로우를 눌렀을 시점의 유저 이름이 정상적으로 출력됩니다.

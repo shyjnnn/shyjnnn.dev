@@ -33,18 +33,18 @@ JavaScript에서 현재 실행되고 있는 함수의 컨텍스트를 참조 (= 
 
 > this를 사용할 때는 호출 방법에 따라서 this값이 어떻게 결정되는지 잘 파악해야 한다.
 
-```
+```jsx
 const obj = {
-  name: "John",
-  sayName: function() {
+  name: 'John',
+  sayName: function () {
     console.log(this.name); // this
   },
   obj2: {
-    name: "Sarah",
-    sayName: function() {
+    name: 'Sarah',
+    sayName: function () {
       console.log(this.name); //this
-    }
-  }
+    },
+  },
 };
 
 const sayName = obj.sayName;
@@ -54,7 +54,6 @@ sayName(); // undefined
 sayName2(); // undefined
 obj.sayName(); // John
 obj.sayName(); // Sarah
-
 ```
 
 - sayName()과 sayName2()를 호출할 때 undefined가 출력된다. 이는 sayName()과 sayName2()를 **호출하는 곳**이 obj 객체가 아니기 때문이다. 즉, this는 obj 객체를 참조하지 않으므로(전역 객체를 참조하기 때문에) undefined를 반환한다.
@@ -82,7 +81,7 @@ lexical적이란 해당 변수 또는 함수가 선언된 위치에 따라 유�
 
 ```jsx
 const person = {
-  name: "John",
+  name: 'John',
   sayHi: function () {
     console.log(`Hi, my name is ${this.name}`);
   },
