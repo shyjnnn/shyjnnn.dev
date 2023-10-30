@@ -1,10 +1,9 @@
-![Untitled](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/593f3e01-25c2-45b8-bf51-5898ba7eb53d)---
+---
 title: Next.js에서의 SSR과 hydration
 date: 2023년 6월 1일
 slug: Next.js에서의-SSR과-hydration
 tags: Next.js
 category: 🙏잡학사전
-
 ---
 
 안녕하세요!🫡 오늘은 Next.js의 hydration에 대해 살펴보려고 합니다.
