@@ -1,5 +1,4 @@
 import Giscus from '@/components/Giscus';
-import Layout from '@/components/shared/Layout';
 import PostContentBody from '@/components/shared/PostContentBody';
 import Title from '@/components/shared/Title';
 import TableOfContents from '@/components/TableOfContents';
@@ -25,17 +24,15 @@ export default async function Post({
   const { content, data } = post;
   const tableOfContents = getMarkdownToc(content);
   return (
-    <Layout className='head'>
+    <>
       <Title title={data.title} date={data.date} tags={stringToArray(data.tags)} />
-      <Layout tag='main' className='flex'>
-        <Layout tag='article'>
-          <PostContentBody content={content} />
-        </Layout>
+      <>
+        <PostContentBody content={content} />
         {tableOfContents.length !== 0 && (
           <TableOfContents tableOfContents={tableOfContents} />
         )}
-      </Layout>
+      </>
       <Giscus />
-    </Layout>
+    </>
   );
 }
