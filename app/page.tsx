@@ -5,9 +5,9 @@ import Category from '@/components/Category';
 
 export default function HomePage() {
   return (
-    <>
+    <main>
       <Category currentCategory='all' />
       <CardList category='all' />
-    </>
+    </main>
   );
 }

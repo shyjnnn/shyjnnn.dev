@@ -22,6 +22,7 @@ const TableOfContentItem = ({
   const id = createId(text);
   const handleClick = () => {
     onCurrentId(id);
+    console.log(isActive);
   };
   const itemClasses = `block py-1 hover:underline ${
     level === 'level-2'
@@ -31,7 +32,7 @@ const TableOfContentItem = ({
       : level === 'level-4'
       ? 'pl-6 sm:pl-8 md:pl-10 lg:pl-12'
       : ''
-  } ${isActive ? 'text-blue' : 'text-semi-gray'}`;
+  } ${isActive ? 'text-pink-400' : 'text-zinc-400'}`;
 
   return (
     <Link id={id} className={itemClasses} onClick={handleClick} href={`#${id}`}>
@@ -56,25 +57,33 @@ const TableOfContents = ({ tableOfContents }: { tableOfContents: TableOfContents
     });
   }, []);
 
+  useEffect(() => {
+    console.log(currentId);
+  }, [currentId]);
+
   return (
-    <div className='sticky top-40 min-w-40rem ml-10 tablet:hidden'>
-      <div className='text-lg font-semibold'>ON THIS PAGE</div>
-      {tableOfContents.map((content, index) => {
-        let level = `level-${content.level}`;
-        if (content.level > lastLevel + 1) {
-          level = `level-${lastLevel + 1}`;
-        }
-        lastLevel = content.level;
-        return (
-          <TableOfContentItem
-            key={index}
-            text={content.text}
-            level={level}
-            isActive={currentId === createId(content.text)}
-            onCurrentId={setCurrentId}
-          />
-        );
-      })}
+    <div className='sticky top-[120px] hidden min-w-[240px] max-w-[260px] self-start lg:block'>
+      <div className='overflow-hidden transition-all'>
+        <div className='font-bold text-lg'>ON THIS PAGE</div>
+        <div className='mt-2 flex flex-col items-start justify-start text-sm'>
+          {tableOfContents.map((content, index) => {
+            let level = `level-${content.level}`;
+            if (content.level > lastLevel + 1) {
+              level = `level-${lastLevel + 1}`;
+            }
+            lastLevel = content.level;
+            return (
+              <TableOfContentItem
+                key={index}
+                text={content.text}
+                level={level}
+                isActive={currentId === createId(content.text)}
+                onCurrentId={setCurrentId}
+              />
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

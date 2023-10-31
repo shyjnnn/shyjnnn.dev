@@ -14,9 +14,9 @@ export default async function Category({
   const category = categories.find((category) => category[0] === currentCategory);
   const count = category ? category[1] : 0;
   return (
-    <div className='py-32'>
+    <div className='py-24'>
       <HeadTitle text={currentCategory} count={count} />
-      <div className='flex flex-wrap justify-center items-center w-full max-w-screen-lg mx-auto my-4 space-x-4'>
+      <div className='flex flex-wrap justify-center items-center w-full max-w-screen-lg mx-auto my-6 space-x-4'>
         {categories.map((category) => (
           <CategoryText
             key={category[0]}

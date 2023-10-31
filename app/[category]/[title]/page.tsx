@@ -26,12 +26,16 @@ export default async function Post({
   return (
     <>
       <Title title={data.title} date={data.date} tags={stringToArray(data.tags)} />
-      <>
-        <PostContentBody content={content} />
-        {tableOfContents.length !== 0 && (
-          <TableOfContents tableOfContents={tableOfContents} />
-        )}
-      </>
+      <div className='relative gap-8 lg:flex'>
+        <article className='prose prose-neutral w-full lg:max-w-3xl md:max-w-none font-spoqa dark:prose-dark'>
+          <PostContentBody content={content} />
+        </article>
+        <nav className='mt-12 ml-auto'>
+          {tableOfContents.length !== 0 && (
+            <TableOfContents tableOfContents={tableOfContents} />
+          )}
+        </nav>
+      </div>
       <Giscus />
     </>
   );
