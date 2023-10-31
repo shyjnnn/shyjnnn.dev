@@ -1,9 +1,7 @@
-import classNames from 'classnames/bind';
-
-import styles from './styles.module.scss';
-
-const cx = classNames.bind(styles);
-
 export default function Chip({ text }: { text: string }) {
-  return <button className={cx('chip')}>{text}</button>;
+  return (
+    <button className='text-size6 font-normal p-1.5 px-2.5 rounded-lg bg-light-blue-gray text-gray hover:bg-blue hover:text-white'>
+      {text}
+    </button>
+  );
 }
