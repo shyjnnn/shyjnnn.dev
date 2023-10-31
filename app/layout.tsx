@@ -17,7 +17,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ko'>
-      <body className={pretendard.className}>
+      <body
+        className={
+          (pretendard.className,
+          'max-w-6xl mx-auto my-0 p-6 sm:w-full md:w-full lg:w-full')
+        }>
         <Gnb />
         {children}
       </body>

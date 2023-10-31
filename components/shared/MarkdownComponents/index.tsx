@@ -2,31 +2,38 @@ import { Components } from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
+import { createId } from '@/utils/getString';
+
 export const MarkdownComponents: Components = {
   h1: ({ children, ...props }) => {
+    const id = createId(children);
+
     return (
-      <h1 className='text-5xl font-bold' {...props}>
+      <h1 className='text-5xl font-bold' id={id} {...props}>
         {children}
       </h1>
     );
   },
   h2: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h2 className='text-4xl font-bold' {...props}>
+      <h2 className='text-4xl font-bold' id={id} {...props}>
         {children}
       </h2>
     );
   },
   h3: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h3 className='text-base font-bold' {...props}>
+      <h3 className='text-base font-bold' id={id} {...props}>
         {children}
       </h3>
     );
   },
   h4: ({ children, ...props }) => {
+    const id = createId(children);
     return (
-      <h4 className='text-base font-bold mt-8' {...props}>
+      <h4 className='text-base font-bold mt-8' id={id} {...props}>
         {children}
       </h4>
     );
@@ -34,11 +41,7 @@ export const MarkdownComponents: Components = {
   code: ({ className, children, ...props }) => {
     const match = /language-(\w+)/.exec(className || '');
     return match ? (
-      <SyntaxHighlighter
-        PreTag='div'
-        language={match[1]}
-        style={materialDark}
-        className='w-full overflow-x-auto rounded-md'>
+      <SyntaxHighlighter PreTag='div' language={match[1]} style={materialDark}>
         {String(children).replace(/wrapLines\n$/, '')}
       </SyntaxHighlighter>
     ) : (

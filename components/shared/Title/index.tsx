@@ -24,7 +24,7 @@ export default function Title({
           ))}
         </div>
       </nav>
-      <hr className='w-full my-4 border-t border-gray-300' />
+      <hr className='w-full my-4 border-t border-gray-200' />
     </div>
   );
 }

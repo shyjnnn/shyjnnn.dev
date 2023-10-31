@@ -7,7 +7,7 @@ export default async function CardList({ category }: { category: string }) {
   const post: PostInfo[] | Error = await getPostsList(category);
   if (post instanceof Error) return <></>;
   return (
-    <div className='grid grid-cols-2 gap-8'>
+    <>
       {post &&
         post.length !== 0 &&
         post.map((card) => {
@@ -22,6 +22,6 @@ export default async function CardList({ category }: { category: string }) {
             />
           );
         })}
-    </div>
+    </>
   );
 }
