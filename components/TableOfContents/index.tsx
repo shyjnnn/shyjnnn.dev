@@ -1,15 +1,10 @@
 'use client';
-import classNames from 'classnames/bind';
 import Link from 'next/link';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import { TableOfContents } from '@/types/components/data.types';
 import { getIntersectionObserver } from '@/utils/getIntersectionObserver';
 import { createId, getRawString } from '@/utils/getString';
-
-import styles from './styles.module.scss';
-
-const cx = classNames.bind(styles);
 
 interface TableOfContentItemProps {
   text: string;
@@ -28,12 +23,18 @@ const TableOfContentItem = ({
   const handleClick = () => {
     onCurrentId(id);
   };
+  const itemClasses = `block py-1 hover:underline ${
+    level === 'level-2'
+      ? 'pl-2 sm:pl-4 md:pl-6 lg:pl-8'
+      : level === 'level-3'
+      ? 'pl-4 sm:pl-6 md:pl-8 lg:pl-10'
+      : level === 'level-4'
+      ? 'pl-6 sm:pl-8 md:pl-10 lg:pl-12'
+      : ''
+  } ${isActive ? 'text-blue' : 'text-semi-gray'}`;
+
   return (
-    <Link
-      id={id}
-      className={cx('toc-item', level, { current: isActive })}
-      onClick={handleClick}
-      href={`#${id}`}>
+    <Link id={id} className={itemClasses} onClick={handleClick} href={`#${id}`}>
       {getRawString(text)}
     </Link>
   );
@@ -56,8 +57,8 @@ const TableOfContents = ({ tableOfContents }: { tableOfContents: TableOfContents
   }, []);
 
   return (
-    <div className={cx('wrap')}>
-      <div className={cx('h2')}>ON THIS PAGE</div>
+    <div className='sticky top-40 min-w-40rem ml-10 tablet:hidden'>
+      <div className='text-lg font-semibold'>ON THIS PAGE</div>
       {tableOfContents.map((content, index) => {
         let level = `level-${content.level}`;
         if (content.level > lastLevel + 1) {
