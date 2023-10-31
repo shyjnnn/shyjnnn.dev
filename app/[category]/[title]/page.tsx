@@ -27,14 +27,17 @@ export default async function Post({
     <>
       <Title title={data.title} date={data.date} tags={stringToArray(data.tags)} />
       <div className='relative gap-8 lg:flex'>
-        <article className='prose prose-neutral w-full lg:max-w-3xl md:max-w-none font-spoqa dark:prose-dark'>
+        <article
+          className={`w-full prose prose-neutral md:max-w-none font-spoqa dark:prose-dark ${
+            tableOfContents.length !== 0 ? 'lg:max-w-3xl' : ''
+          }`}>
           <PostContentBody content={content} />
         </article>
-        <nav className='mt-12 ml-auto'>
-          {tableOfContents.length !== 0 && (
+        {tableOfContents.length !== 0 && (
+          <nav className='mt-12 ml-auto'>
             <TableOfContents tableOfContents={tableOfContents} />
-          )}
-        </nav>
+          </nav>
+        )}
       </div>
       <Giscus />
     </>
