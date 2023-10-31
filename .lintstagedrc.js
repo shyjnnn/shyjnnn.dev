@@ -9,7 +9,4 @@ module.exports = {
       `npx prettier --write ${filenames.join(' ')}`,
     ];
   },
-
-  '**/*.(css|scss)': (filenames) =>
-    `npx stylelint --ignore-path .gitignore ${filenames.join(' ')}`,
 };
