@@ -1,11 +1,7 @@
-import classNames from 'classnames/bind';
-
 import { getCategories } from '@/services/getCategories';
 
 import CategoryText from '../shared/CategoryText';
 import HeadTitle from '../shared/HeadTitle';
-import styles from './styles.module.scss';
-const cx = classNames.bind(styles);
 
 export default async function Category({
   currentCategory = 'all',
@@ -18,9 +14,9 @@ export default async function Category({
   const category = categories.find((category) => category[0] === currentCategory);
   const count = category ? category[1] : 0;
   return (
-    <div className={cx('wrap')}>
+    <div className='py-32'>
       <HeadTitle text={currentCategory} count={count} />
-      <div className={cx('category-list')}>
+      <div className='flex flex-wrap justify-center items-center w-full max-w-screen-lg mx-auto my-4 space-x-4'>
         {categories.map((category) => (
           <CategoryText
             key={category[0]}
