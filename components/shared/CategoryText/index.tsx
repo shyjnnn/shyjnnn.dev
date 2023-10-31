@@ -15,7 +15,7 @@ export default function CategoryText({
     <Link href={text === 'all' ? '/' : `/${createId(text)}`}>
       <div className='flex items-center gap-2 justify-center w-auto mx-auto'>
         <h1
-          className={`text-size5 font-normal italic ${
+          className={`text-base font-normal italic ${
             isCurrent ? 'text-blue underline' : 'hover:underline'
           }`}>
           {text.toUpperCase()}
