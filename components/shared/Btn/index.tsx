@@ -1,13 +1,8 @@
-import classNames from 'classnames/bind';
-
 import { BtnProps } from '@/types/components/shared.types';
-
-import styles from './styles.module.scss';
-const cx = classNames.bind(styles);
 
 const Btn = ({ children, ...props }: BtnProps) => {
   return (
-    <button className={cx('btn')} {...props}>
+    <button className='px-4 py-4 rounded-full bg-black text-white' {...props}>
       {children}
     </button>
   );
