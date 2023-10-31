@@ -1,6 +1,6 @@
 export default function Chip({ text }: { text: string }) {
   return (
-    <button className='text-size6 font-normal p-1.5 px-2.5 rounded-lg bg-light-blue-gray text-zinc-400 hover:bg-blue hover:text-white'>
+    <button className='text-sm font-normal px-1.5 rounded-md bg-gray-400 text-white hover:bg-pink-400'>
       {text}
     </button>
   );

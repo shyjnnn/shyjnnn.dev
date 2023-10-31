@@ -13,9 +13,9 @@ export default function Title({
 }) {
   return (
     <div className='flex flex-col items-start w-full'>
-      <h1 className='text-4xl font-semibold'>{title}</h1>
-      <nav className='w-full mt-4 flex items-center justify-between'>
-        <div className='text-base font-normal text-black'>
+      <h1 className='text-4xl font-extrabold'>{title}</h1>
+      <nav className='flex items-center justify-between w-full mt-4'>
+        <div className='text-sm font-normal text-gray-500'>
           {dateToString(new Date(date))}
         </div>
         <div className='flex gap-2'>
