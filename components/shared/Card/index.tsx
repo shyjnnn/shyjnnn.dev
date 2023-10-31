@@ -1,8 +1,4 @@
-import classNames from 'classnames/bind';
 import Link from 'next/link';
-
-import styles from './styles.module.scss';
-const cx = classNames.bind(styles);
 
 export default function Card({
   category,
@@ -18,11 +14,13 @@ export default function Card({
   en_category: string;
 }) {
   return (
-    <Link className={cx('wrap')} href={`${en_category}/${slug}`}>
-      <div className={cx('container')}>
-        <p className={cx('category')}>{category}</p>
-        <h3 className={cx('title')}>{title}</h3>
-        <p className={cx('date')}>{date}</p>
+    <Link href={`/${en_category}/${slug}`}>
+      <div className='w-full'>
+        <div className='relative p-4 transition-transform transform duration-250 ease border border-yellow-gray rounded gap-4 flex flex-col justify-center items-start hover:bg-yellow-gray'>
+          <p className='text-blue text-size5 font-normal'>{category}</p>
+          <h3 className='text-size4 font-semibold'>{title}</h3>
+          <p className='text-gray text-size5 font-normal'>{date}</p>
+        </div>
       </div>
     </Link>
   );
