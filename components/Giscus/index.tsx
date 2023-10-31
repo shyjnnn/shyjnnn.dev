@@ -27,5 +27,5 @@ export default function Giscus() {
     ref.current.appendChild(scriptElem);
   }, []);
 
-  return <section style={{ width: '100%', marginTop: '10rem' }} ref={ref} />;
+  return <section className='w-full mt-40' ref={ref} />;
 }
