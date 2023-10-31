@@ -1,10 +1,6 @@
-import classNames from 'classnames/bind';
-
 import dateToString from '@/utils/dateToString';
 
 import Chip from '../Chip';
-import styles from './styles.module.scss';
-const cx = classNames.bind(styles);
 
 export default function Title({
   title,
@@ -16,17 +12,19 @@ export default function Title({
   date: string;
 }) {
   return (
-    <div className={cx('wrap')}>
-      <h1 className={cx('title')}>{title}</h1>
-      <nav>
-        <div className={cx('date')}>{dateToString(new Date(date))}</div>
-        <div className={cx('tags')}>
+    <div className='flex flex-col items-start w-full'>
+      <h1 className='text-4xl font-semibold'>{title}</h1>
+      <nav className='w-full mt-4 flex items-center justify-between'>
+        <div className='text-base font-normal text-black'>
+          {dateToString(new Date(date))}
+        </div>
+        <div className='flex gap-2'>
           {tags.map((tag) => (
             <Chip key={tag} text={tag} />
           ))}
         </div>
       </nav>
-      <hr />
+      <hr className='w-full my-4 border-t border-gray-300' />
     </div>
   );
 }
