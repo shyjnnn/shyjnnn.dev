@@ -1,5 +1,5 @@
 ---
-title: 모던 자바스크립트 백과사전
+title: '모던 자바스크립트 백과사전'
 date: 2023-04-14
 slug: 모던-자바스크립트-백과사전
 tags: JavaScript

@@ -1,5 +1,5 @@
 ---
-title: CSS 레이아웃 백과사전
+title: 'CSS 레이아웃 백과사전'
 date: 2023-03-22
 slug: CSS-레이아웃-백과사전
 tags: CSS
