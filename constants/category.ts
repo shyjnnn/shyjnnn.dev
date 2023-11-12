@@ -1,4 +1,4 @@
-const CATEGORY_MAP = {
+const CATEGORY_MAP: { [key: string]: string } = {
   encyclos: '🏫백과사전',
   trivia: '🙏잡학사전',
 };

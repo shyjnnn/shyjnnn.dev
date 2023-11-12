@@ -8,7 +8,7 @@ export default function Chip({
   text: string;
 }) {
   const color = variant
-    ? CATEGORY_CHIP_COLOR['잡학사전']
+    ? CATEGORY_CHIP_COLOR[text]
     : 'bg-gray-400 text-white hover:bg-pink-300';
   return (
     <button className={`text-sm font-normal px-1.5 rounded-md ${color}`}>{text}</button>
