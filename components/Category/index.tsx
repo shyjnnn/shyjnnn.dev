@@ -19,12 +19,7 @@ export default async function Category({
       <HeadTitle text={CATEGORY_MAP[currentCategory] || currentCategory} count={count} />
       <div className='flex flex-wrap items-center justify-center w-full max-w-screen-lg mx-auto my-6 space-x-4'>
         {categories.map((category) => (
-          <CategoryText
-            key={category[0]}
-            text={category[0]}
-            count={category[1]}
-            isCurrent={currentCategory === category[0]}
-          />
+          <CategoryText key={category[0]} text={category[0]} count={category[1]} />
         ))}
       </div>
     </div>
