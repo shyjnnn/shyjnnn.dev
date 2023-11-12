@@ -1,26 +1,23 @@
+'use client';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
+import { CATEGORY_MAP } from '@/constants/category';
 import { createId } from '@/utils/getString';
 
-export default function CategoryText({
-  text,
-  count,
-  isCurrent,
-}: {
-  text: string;
-  count: number;
-  isCurrent: boolean;
-}) {
+export default function CategoryText({ text, count }: { text: string; count: number }) {
+  const params = useParams();
+  const isCurrent = params?.category ? params?.category === text : 'all' === text;
   return (
     <Link href={text === 'all' ? '/' : `/${createId(text)}`}>
-      <div className='flex items-center gap-1 justify-center w-auto mx-auto'>
+      <div className='flex items-center justify-center w-auto gap-1 mx-auto'>
         <h1
-          className={`text-base font-normal italic border-b-2 border-white hover:border-pink-300 transition duration-250${
-            isCurrent ? 'border-b-2 border-pink-300' : ''
+          className={`text-base font-normal italic border-b-2 hover:border-pink-300 transition duration-250 ${
+            isCurrent ? 'border-pink-300' : 'border-white'
           }`}>
-          {text.toUpperCase()}
+          {CATEGORY_MAP[text] || text.toUpperCase()}
         </h1>
-        <p className='text-base font-normal italic text-gray-400'>{`(${count})`}</p>
+        <p className='text-base italic font-normal text-gray-400'>{`(${count})`}</p>
       </div>
     </Link>
   );
