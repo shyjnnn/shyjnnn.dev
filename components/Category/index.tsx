@@ -1,4 +1,4 @@
-import { CATEGORY_MAP } from '@/constants/category';
+import { CATEGORY_MAP } from '@/constants/api';
 import { getCategories } from '@/services/getCategories';
 
 import CategoryText from '../shared/CategoryText';

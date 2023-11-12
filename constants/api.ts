@@ -3,4 +3,9 @@ const BASE_URL =
     ? process.env.BASE_URL
     : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
-export { BASE_URL };
+const CATEGORY_MAP: { [key: string]: string } = {
+  encyclos: '🏫백과사전',
+  trivia: '🙏잡학사전',
+};
+
+export { BASE_URL, CATEGORY_MAP };

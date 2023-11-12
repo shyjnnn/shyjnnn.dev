@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
-import { CATEGORY_MAP } from '@/constants/category';
+import { CATEGORY_MAP } from '@/constants/api';
 import { createId } from '@/utils/getString';
 
 export default function CategoryText({ text, count }: { text: string; count: number }) {
