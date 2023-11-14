@@ -26,11 +26,11 @@ const TableOfContentItem = ({
   };
   const itemClasses = `block py-1 hover:underline ${
     level === 'level-2'
-      ? 'pl-2 sm:pl-4 md:pl-6 lg:pl-8'
+      ? 'pl-6'
       : level === 'level-3'
-      ? 'pl-4 sm:pl-6 md:pl-8 lg:pl-10'
+      ? 'pl-12'
       : level === 'level-4'
-      ? 'pl-6 sm:pl-8 md:pl-10 lg:pl-12'
+      ? 'pl-24'
       : ''
   } ${isActive ? 'text-pink-400' : 'text-zinc-400'}`;
 
@@ -64,10 +64,11 @@ const TableOfContents = ({ tableOfContents }: { tableOfContents: TableOfContents
   return (
     <div className='sticky top-[120px] hidden min-w-[240px] max-w-[260px] self-start lg:block'>
       <div className='overflow-hidden transition-all'>
-        <div className='font-bold text-lg'>ON THIS PAGE</div>
-        <div className='mt-2 flex flex-col items-start justify-start text-sm'>
+        <div className='text-lg font-bold'>ON THIS PAGE</div>
+        <div className='flex flex-col items-start justify-start mt-2 text-sm'>
           {tableOfContents.map((content, index) => {
             let level = `level-${content.level}`;
+            console.log(content.level);
             if (content.level > lastLevel + 1) {
               level = `level-${lastLevel + 1}`;
             }
