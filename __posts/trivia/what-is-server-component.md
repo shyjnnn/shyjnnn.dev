@@ -1,6 +1,6 @@
 ---
 title: 서버 컴포넌트 이모저모
-date: 2023년 11월 14일
+date: 2023-11-14
 slug: what-is-server-component
 tags: Next.js, React.js
 summary: 서버 컴포넌트.. 너 뉘기야
