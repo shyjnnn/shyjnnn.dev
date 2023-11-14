@@ -91,15 +91,30 @@ export const MarkdownComponents: Components = {
     </strong>
   ),
   aside: ({ children, ...props }) => (
-    <aside className='w-full p-4 my-4 rounded-md bg-light-blue-gray' {...props}>
+    <aside className='w-full p-4 my-10 bg-gray-100 rounded-md' {...props}>
       {children}
     </aside>
   ),
+
   hr: ({ ...props }) => <hr className='my-12' {...props} />,
 
   a: ({ children, ...props }) => (
     <a className='underline hover:text-pink-400' {...props}>
       {children}
     </a>
+  ),
+  table: ({ children }) => (
+    <table className='border border-collapse border-gray-200'>{children}</table>
+  ),
+  thead: ({ children }) => <thead className='bg-gray-100'>{children}</thead>,
+  th: ({ children }) => <th className='px-3 py-2 border border-gray-200 '>{children}</th>,
+  tbody: ({ children }) => <tbody className=''>{children}</tbody>,
+  tr: ({ children }) => <tr className=''>{children}</tr>,
+  td: ({ children }) => {
+    return <td className='px-3 py-2 border border-gray-200'>{children}</td>;
+  },
+
+  blockquote: ({ children }) => (
+    <blockquote className='pl-3 my-6 border-l-4 border-black'>{children}</blockquote>
   ),
 };
