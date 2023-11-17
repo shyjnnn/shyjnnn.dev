@@ -21,8 +21,5 @@ const CATEGORY_CHIP_COLOR: { [key: string]: string } = {
   '✏️TIL': 'bg-violet-100',
   '📑WIL': 'bg-orange-100',
   '🧮Algorithm': 'bg-rose-100',
-  '👻나자신': 'bg-slate-100',
-  '💹Cryptometer': 'bg-lime-100',
-  '🔗Linkbrary': 'bg-cyan-100',
-  '👩‍🍳더줄게': 'bg-orange-200',
+  '🌱회고': 'bg-orange-200',
 };
