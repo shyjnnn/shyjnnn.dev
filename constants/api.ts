@@ -7,6 +7,7 @@ const CATEGORY_MAP: { [key: string]: string } = {
   encyclos: '🏫백과사전',
   trivia: '🙏잡학사전',
   algorithm: '🧮Algorithm',
+  review: '🌱회고',
 };
 
 export { BASE_URL, CATEGORY_MAP };
