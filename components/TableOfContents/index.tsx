@@ -22,7 +22,6 @@ const TableOfContentItem = ({
   const id = createId(text);
   const handleClick = () => {
     onCurrentId(id);
-    console.log(isActive);
   };
   const itemClasses = `block py-1 hover:underline ${
     level === 'level-2'
@@ -57,9 +56,7 @@ const TableOfContents = ({ tableOfContents }: { tableOfContents: TableOfContents
     });
   }, []);
 
-  useEffect(() => {
-    console.log(currentId);
-  }, [currentId]);
+  useEffect(() => {}, [currentId]);
 
   return (
     <div className='sticky top-[120px] hidden min-w-[240px] max-w-[260px] self-start lg:block'>
@@ -68,7 +65,6 @@ const TableOfContents = ({ tableOfContents }: { tableOfContents: TableOfContents
         <div className='flex flex-col items-start justify-start mt-2 text-sm'>
           {tableOfContents.map((content, index) => {
             let level = `level-${content.level}`;
-            console.log(content.level);
             if (content.level > lastLevel + 1) {
               level = `level-${lastLevel + 1}`;
             }
