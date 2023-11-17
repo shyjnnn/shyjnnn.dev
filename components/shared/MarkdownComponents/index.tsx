@@ -59,7 +59,7 @@ export const MarkdownComponents: Components = {
       <img
         src={props.src as string}
         alt={props.alt as string}
-        className='w-full rounded'
+        className='w-auto rounded-md max-h-96'
         width={500}
         height={500}
       />
