@@ -5,7 +5,6 @@ import dateToString from '@/utils/dateToString';
 
 export default async function CardList({ category }: { category: string }) {
   const post: PostInfo[] | Error = await getPostsList(category);
-  console.log(post);
   if (post instanceof Error) return <></>;
   return (
     <>
