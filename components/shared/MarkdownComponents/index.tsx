@@ -59,12 +59,17 @@ export const MarkdownComponents: Components = {
       <img
         src={props.src as string}
         alt={props.alt as string}
-        className='w-auto rounded-md max-h-96'
-        width={500}
-        height={500}
+        className={`w-auto rounded-md drop-shadow-md bg-white mx-auto my-3 ${
+          props.width ? 'h-auto' : 'max-h-96'
+        }`}
+        style={props.width ? { width: `${props.width}px` } : {}}
       />
     );
   },
+  em: ({ children }) => (
+    <em className='block text-xs italic text-center text-gray-500'>{children}</em>
+  ),
+
   p: ({ children, ...props }) => (
     <p className='my-4 text-base' {...props}>
       {children}
