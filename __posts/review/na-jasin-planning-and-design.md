@@ -2,7 +2,6 @@
 title: '[나자신] 기획과 디자인'
 date: 2023-08-15
 slug: na-jasin-planning-and-design
-type: 'Post'
 tags: '👻나자신'
 category: '🌱회고'
 ---
