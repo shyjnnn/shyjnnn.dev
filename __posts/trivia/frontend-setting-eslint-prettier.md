@@ -2,7 +2,7 @@
 title: 'FE 개발 환경 세팅 - ESLint & Prettier'
 date: 2023-07-06
 slug: frontend-setting-eslint-prettier
-tags: ESLint, Prettier
+tags: ESLint, Prettier, 👩‍🍳더줄게
 category: 🙏잡학사전
 ---
 
