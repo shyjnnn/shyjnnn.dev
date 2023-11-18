@@ -8,7 +8,7 @@ category: 🌱회고
 thumbnail: 'https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/e78da46e-718a-4e84-b983-0a9a15be707e'
 ---
 
-> [🔗GitHub](https://github.com/najasin/na-jasin-FE) | [🔗사이트](https://na-jasin.com/)
+> [GitHub](https://github.com/najasin/na-jasin-FE) | [사이트](https://na-jasin.com/)
 
 약 한달 간 최종 프로젝트를 진행하느라 바쁜 한달을 보냈다.
 
@@ -229,7 +229,7 @@ _왼 - 내가 설정한 값만 존재 / 오 - 타인이 설정한 값의 평균�
 
 ## Problem
 
-### 1. useFunnel hook의 memoization
+### 1. Funnel 컴포넌츠의 infinite depth error
 
 ![regacy-useFunnel](https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/abe673ec-003f-40d9-91ea-143d506fa842)
 
