@@ -4,6 +4,8 @@ interface PostInfo {
   date: Date;
   category: string;
   en_category: string;
+  thumbnail?: string;
+  summary?: string;
 }
 
 interface PostData {
@@ -12,6 +14,8 @@ interface PostData {
   slug: string;
   tags: string;
   category: string;
+  thumbnail?: string;
+  summary?: string;
 }
 
 interface BlogPost {
