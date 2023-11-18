@@ -32,6 +32,8 @@ async function getAllPostsList() {
           date: matterResult.data.date as Date,
           category: matterResult.data.category as string,
           en_category: category,
+          thumbnail: matterResult.data?.thumbnail as string,
+          summary: matterResult.data?.summary as string,
         };
 
         allPosts.push(postLists);
