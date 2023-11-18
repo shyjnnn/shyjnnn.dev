@@ -31,7 +31,10 @@ export default async function Post({
           className={`w-full prose prose-neutral md:max-w-none font-spoqa dark:prose-dark ${
             tableOfContents.length !== 0 ? 'lg:max-w-3xl' : ''
           }`}>
-          <PostContentBody content={content} />
+          <PostContentBody
+            content={content}
+            thumbnail={data?.thumbnail ? data.thumbnail : undefined}
+          />
         </article>
         {tableOfContents.length !== 0 && (
           <nav className='mt-12 ml-auto'>

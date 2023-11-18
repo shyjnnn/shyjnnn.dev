@@ -5,6 +5,7 @@ import dateToString from '@/utils/dateToString';
 
 export default async function CardList({ category }: { category: string }) {
   const post: PostInfo[] | Error = await getPostsList(category);
+  console.log(post);
   if (post instanceof Error) return <></>;
   return (
     <>
@@ -19,6 +20,8 @@ export default async function CardList({ category }: { category: string }) {
               slug={card.id}
               date={dateToString(new Date(card.date))}
               en_category={card.en_category}
+              thumbnail={card?.thumbnail}
+              summary={card?.summary}
             />
           );
         })}
