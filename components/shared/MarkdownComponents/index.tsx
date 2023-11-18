@@ -104,8 +104,8 @@ export const MarkdownComponents: Components = {
   hr: ({ ...props }) => <hr className='my-12' {...props} />,
 
   a: ({ children, ...props }) => (
-    <a className='underline hover:text-pink-400' {...props}>
-      {children}
+    <a className='text-blue-500 underline hover:text-pink-400' {...props}>
+      🔗 {children}
     </a>
   ),
   table: ({ children }) => (
