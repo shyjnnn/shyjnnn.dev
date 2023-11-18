@@ -2,7 +2,7 @@
 title: '나 사용 설명서 제작 플랫폼, 나자신 회고'
 date: 2023-09-01
 slug: na-jasin-reviews
-tags: React.js, 👻나자신
+tags: '👻나자신'
 summary: 나자신 프로젝트 회고
 category: 🌱회고
 thumbnail: 'https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/e78da46e-718a-4e84-b983-0a9a15be707e'

@@ -2,7 +2,7 @@
 title: '[나자신] cloneElement을 사용해서 공통 컴포넌트 input을 만들어보자'
 date: 2023-08-09
 slug: create-a-common-component-input-using-cloneElement
-tags: React.js, 👻나자신
+tags: 👻나자신, Next.js, Compound Pattern
 summary: 나자신 프로젝트 공통컴포넌트 제작기. compound pattern과 cloneElement 사용
 category: '🌱회고'
 ---
