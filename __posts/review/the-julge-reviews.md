@@ -24,8 +24,7 @@ Next.js를 처음 도입한 프로젝트이다.
 
 크립토미터 프로젝트 당시에는 airbnb lint 규칙을 무조건적으로 사용했다.
 
-<img width="635" alt="image" src="https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/91f0646a-2021-4d71-b3df-9bb09675b23e">
-_컨벤션 docs 일부_
+<img width="635" alt="image" src="https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/91f0646a-2021-4d71-b3df-9bb09675b23e">_컨벤션 docs 일부_
 
 하지만 이번 프로젝트에서는 팀 회의를 통해 직접 정한 컨벤션을 설정했다. 특히 변수, 함수 등의 네이밍 컨벤션을 정했기 때문에 eslint rules에도 포함시켜줬다.
 
@@ -139,6 +138,7 @@ API 핸들러를 추상화해 쉽게 가져다 쓰기 위해 미리 핸들러를
 도메인은 `user-type`, `common`, `shared` 3가지의 기준으로 나눴고, 각 도메인 별 위의 4가지 라이브러리 폴더를 가진다. 이렇게 폴더구조를 확정해놓으면 UI와 api 로직을 확실히 나눌 수 있었고, 만약 오류가 난다면 ui 문제인지, data 문제인지 원인을 빠르게 파악할 수 있었다.
 
 <br>
+
 **단점**
 
 다만 단점이 존재했다. **폴더가 너무나도 많아진다는 것**이다. 버튼과 같이 아주 작은 컴포넌트를 구현할 때도 UI와 feature로 나눠야했고, 각 폴더별로 한가지의 파일만 존재해도 폴더 하위에 들어가야했기 때문에 부득이하게 폴더가 많아질 수 밖에 없었다. 소규모 프로젝트라면 이정도로 폴더가 많아지는 일은 흔치 않은데..
@@ -173,11 +173,9 @@ Next App router의 가장 큰 특징 중 하나는 **서버 컴포넌트의 도�
 
 다만, 서버 컴포넌트를 활용하는 트릭에 아직 낯설었다. 더 많은 레퍼런스를 찾아보며 best practice를 찾고 싶다.
 
-<img width="345" alt="image" src="https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/bb474bd5-15b7-4e65-9b9c-f77a038ed52c">
-_Before_
+<img width="345" alt="image" src="https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/bb474bd5-15b7-4e65-9b9c-f77a038ed52c">_Before_
 
-<img width="350" alt="image" src="https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/d6218b9a-49b9-420b-8c3c-c5fb5ea69cb0">
-_After_
+<img width="350" alt="image" src="https://github.com/shyjnnn/shyjnnn.dev/assets/81355590/d6218b9a-49b9-420b-8c3c-c5fb5ea69cb0">_After_
 
 **결론적**으로 서버 컴포넌트로 분리했을 때 총 **번들 사이즈가 5KB 감**소했다.
 
