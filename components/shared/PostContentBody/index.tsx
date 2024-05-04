@@ -10,7 +10,7 @@ export default function PostContentBody({
   content,
   thumbnail,
 }: {
-  content: string;
+  content: string | JSX.Element;
   thumbnail?: string;
 }) {
   return (
@@ -25,11 +25,15 @@ export default function PostContentBody({
           className={'w-auto rounded-md drop-shadow-md bg-white mx-auto my-3'}
         />
       )}
-      <ReactMarkdown
-        components={MarkdownComponents}
-        rehypePlugins={[rehypeRaw, remarkGfm]}>
-        {content}
-      </ReactMarkdown>
+      {typeof content === 'string' ? (
+        <ReactMarkdown
+          components={MarkdownComponents}
+          rehypePlugins={[rehypeRaw, remarkGfm]}>
+          {content}
+        </ReactMarkdown>
+      ) : (
+        content
+      )}
     </>
   );
 }
