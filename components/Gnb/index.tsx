@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 export default function Gnb() {
   return (
@@ -8,11 +8,11 @@ export default function Gnb() {
         href='/'>
         Shyjnnn<span className='text-3xl text-pink-400'>.</span>dev
       </a>
-      <Link
+      {/* <Link
         href='/portfolio'
         className='text-xl italic font-semibold transition border-b-2 border-white hover:border-pink-300 duration-250'>
         Portfolio
-      </Link>
+      </Link> */}
     </header>
   );
 }
